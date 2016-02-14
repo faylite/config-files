@@ -1,1 +1,0 @@
-/home/benjamin/.zshrc
