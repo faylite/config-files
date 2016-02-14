@@ -126,3 +126,6 @@ filetype plugin indent on	" required
 " Put your non-Plugin stuff after this line
 
 " End Vundle }}}
+
+" Enable powerline fonts
+let g:airline_powerline_fonts = 1
