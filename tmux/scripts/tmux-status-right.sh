@@ -19,7 +19,7 @@ ret=""
 
 # --- Currently Playing deadbeef track ---
 ret+="#[fg=colour236]$sepR#[fg=white]#[bg=colour236]"
-ret+=" ♫$current_title "
+ret+=" ♪ $current_title "
 
 # --- Current Date
 ret+="#[fg=colour237]$sepR#[fg=white]#[bg=colour237]"
