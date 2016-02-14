@@ -14,5 +14,8 @@ alias ev='vim ~/.vimrc'
 alias et='vim ~/.tmux.conf'
 alias ez='vim ~/.zshrc'
 
+# Commonly used programs
+alias v='vim'
+
 # General
 alias c='clear'
