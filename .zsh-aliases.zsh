@@ -5,9 +5,10 @@ alias tls='tmux ls'
 alias tkill='tmux kill-session -t'
 
 # Git
-alias gadd='git add'
-alias gcommit='git commit -m'
-alias gpush='git push origin'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push origin'
+alias s='git status'
 
 # Edit config file shortcuts
 alias ev='vim ~/.vimrc'
