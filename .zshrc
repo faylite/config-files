@@ -100,4 +100,4 @@ export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 
 # Add extra aliases
-source .zsh-aliases.zsh
+source ~/.zsh-aliases.zsh
