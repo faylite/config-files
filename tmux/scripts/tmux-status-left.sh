@@ -19,10 +19,10 @@ ret+="@$HOSTNAME "
 
 # End bit
 ret+="#[bg=colour236]#[fg=blue]$sepL#[fg=white]"
-ret+="#S"
+ret+=" #S "
 
 # End bit
-ret+="#[bg=colour236]#[bg=colour235]#[fg=colour236]"
+ret+="#[bg=colour236]#[bg=colour235]#[fg=colour236]$sepL"
 
 # Original
 # set -g status-left '#[bg=blue]#[fg=white] #(echo $USER)@#H #[bg=colour236]#[fg=blue] #[fg=white]#S #[bg=colour236]#[bg=colour235]#[fg=colour236]'
