@@ -17,7 +17,7 @@ ret+=" $USER"
 # and current machine/server
 ret+="@$HOSTNAME "
 
-# End bit
+# Session name
 ret+="#[bg=colour236]#[fg=blue]$sepL#[fg=white]"
 ret+=" #S "
 
