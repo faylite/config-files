@@ -45,11 +45,19 @@ ZSH_THEME="af-magic"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# -------- Plugins ---------------------
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git z nyan nmap)
+# git 			- Git completion
+# z 			- directory jumper, builds an database and jumps to the dir you most likely wanted to go to
+# nmap			- nmap completion
+# sudo			- Press <ESC> twice to add sudo before command, or previous command if line is empty
+# vagrant		- Vagrant completion
+# web-search 	- Web search, google TEXT, bing TEXT, ddg TEXT
+# nyan		 	- nyan nyan nyan nyan nyan nyan
+# catimg		- Prints an image of a cat
+# rand-quote 	- random quote
+plugins=(git z nmap sudo vagrant web-search nyan catimg rand-quote lol)
+# --------------------------------------
 
 # User configuration
 
@@ -101,3 +109,5 @@ export VISUAL=$EDITOR
 
 # Add extra aliases
 source ~/.zsh-aliases.zsh
+
+export VAGRANT_HOME="/media/benjamin/Data/vagrant/.vagrant.d"
