@@ -17,8 +17,12 @@ current_time=$(date +%H:%M)
 # Build the status line
 ret=""
 
-# --- Currently Playing deadbeef track ---
+# --- Working Directory ---
 ret+="#[fg=colour236]$sepR#[fg=white]#[bg=colour236]"
+ret+=" $PWD "
+
+# --- Currently Playing deadbeef track ---
+ret+="#[fg=colour208]$sepR#[fg=white]#[bg=colour208]"
 ret+=" ♪ $current_title "
 
 # --- Current Date
