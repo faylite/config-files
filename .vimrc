@@ -112,6 +112,9 @@ Plugin 'tmux-plugins/vim-tmux'
 " Vim colorschemes
 Plugin 'flazz/vim-colorschemes'
 
+" Better PHP syntax
+Plugin 'StanAngeloff/php.vim'
+
 " All Plugins must be added before the following line
 call vundle#end()			" required
 filetype plugin indent on	" required
