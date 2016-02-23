@@ -111,3 +111,6 @@ export VISUAL=$EDITOR
 source ~/.zsh-aliases.zsh
 
 export VAGRANT_HOME="/media/benjamin/Data/vagrant/.vagrant.d"
+
+# Add Composer bin to path
+export PATH="/home/benjamin/.composer/vendor/bin:$PATH" 
