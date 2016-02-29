@@ -1,6 +1,7 @@
 " ----- General -----
 " Autmoatically change working directory to current file
-set autochdir
+" Disabled for fuzzy search
+" set autochdir
 
 " ----- Visual ------
 
