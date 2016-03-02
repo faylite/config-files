@@ -52,11 +52,15 @@ ZSH_THEME="af-magic"
 # nmap			- nmap completion
 # sudo			- Press <ESC> twice to add sudo before command, or previous command if line is empty
 # vagrant		- Vagrant completion
+# composer		- PHP Composer completion
+# laravel5		- Laravel5 auto-completion and aliases
 # web-search 	- Web search, google TEXT, bing TEXT, ddg TEXT
 # nyan		 	- nyan nyan nyan nyan nyan nyan
 # catimg		- Prints an image of a cat
 # rand-quote 	- random quote
-plugins=(git z nmap sudo vagrant web-search nyan catimg rand-quote lol)
+
+plugins=(git z nmap sudo vagrant web-search composer laravel5 nyan catimg rand-quote lol)
+
 # --------------------------------------
 
 # User configuration
