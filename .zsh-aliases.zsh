@@ -20,3 +20,7 @@ alias v='vim'
 
 # General
 alias c='clear'
+
+# PHP dev tools
+# Artisan shortcut
+alias artisan='php artisan'
