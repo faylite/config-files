@@ -23,6 +23,11 @@ alias c='clear'
 # Command = double clicking file
 alias o='xdg-open'
 
+# Volume control
+alias vol='amixer -D pulse sset Master '
+alias volup='amixer -D pulse sset Master 5%+'
+alias voldown='amixer -D pulse sset Master 5%-'
+
 # PHP dev tools
 # Artisan shortcut
 alias artisan='php artisan'
