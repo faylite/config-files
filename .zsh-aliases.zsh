@@ -20,6 +20,8 @@ alias v='vim'
 
 # General
 alias c='clear'
+# Command = double clicking file
+alias o='xdg-open'
 
 # PHP dev tools
 # Artisan shortcut
