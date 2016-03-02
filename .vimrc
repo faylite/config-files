@@ -101,23 +101,34 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+" let g:airline_extensions=['ctrlp']
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
 " NERDTree, file explorer
 Plugin 'scrooloose/nerdtree'
+" Map NERDTree to Control + n
+map <C-n> :NERDTreeToggle<CR>
 
 " Git Integration
 Plugin 'tpope/vim-fugitive'
 
-" Tmux Integration
-Plugin 'tmux-plugins/vim-tmux'
-
 " Vim colorschemes
 Plugin 'flazz/vim-colorschemes'
 
-" Better PHP syntax
-Plugin 'StanAngeloff/php.vim'
-
 " CtrlP fuzzy file search
 Plugin 'kien/ctrlp.vim'
+
+" Auto-create directories when saving in non-existen dir
+Plugin 'travisjeffery/vim-auto-mkdir'
+
+" ---------- Syntax plugins -----------
+" PHP
+Plugin 'StanAngeloff/php.vim'
+" Tmux config file
+Plugin 'tmux-plugins/vim-tmux'
+" Laravel Blade
+Plugin 'jwalton512/vim-blade'
 
 " All Plugins must be added before the following line
 call vundle#end()			" required
