@@ -1,4 +1,5 @@
 # Tmux
+alias t='tmux'
 alias ta='tmux attach -t'
 alias tnew='tmux new -s'
 alias tls='tmux ls'
