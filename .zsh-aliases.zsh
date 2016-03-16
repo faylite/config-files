@@ -15,6 +15,7 @@ alias s='git status'
 alias ev='vim ~/.vimrc'
 alias et='vim ~/.tmux.conf'
 alias ez='vim ~/.zshrc'
+alias ep='vim ~/.local_env.sh'
 
 # Commonly used programs
 alias v='vim'
