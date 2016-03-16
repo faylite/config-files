@@ -100,6 +100,9 @@ source $ZSH/oh-my-zsh.sh
 # --------------- Custom Stuff ---------------
 #
 
+# Switch to bash like glob error handling, zsh throws an error when globbing fails, bash returns the unmodified glob, (remember -?)
+setopt NO_NOMATCH
+
 # Set terminal to one with 256color support
 export TERM="xterm-256color"
 
