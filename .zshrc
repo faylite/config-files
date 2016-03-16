@@ -116,13 +116,5 @@ source ~/.config-files/.zsh-aliases.zsh
 
 export VAGRANT_HOME="/media/benjamin/Data/vagrant/.vagrant.d"
 
-# Add Composer bin to path
-export PATH="/home/benjamin/.composer/vendor/bin:$PATH" 
-# Add Node to path
-export PATH="/opt/node-v4.3.1/bin:$PATH"
-# Add Android Platform-tools to path
-export PATH="/home/benjamin/dev/tools/android-sdk/platform-tools:$PATH"
-# Add Android tools to path
-export PATH="/home/benjamin/dev/tools/android-sdk/tools:$PATH"
-# Add Gradle to path
-export PATH="/home/benjamin/dev/tools/gradle-2.11/bin:$PATH"
+# source custom PATH for this system
+source ~/.local_env.sh
