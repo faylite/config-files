@@ -112,7 +112,7 @@ export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 
 # Add extra aliases
-source ~/.zsh-aliases.zsh
+source ~/.config-files/.zsh-aliases.zsh
 
 export VAGRANT_HOME="/media/benjamin/Data/vagrant/.vagrant.d"
 
