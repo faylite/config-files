@@ -23,6 +23,8 @@ alias v='vim'
 alias c='clear'
 # Command = double clicking file
 alias o='xdg-open'
+# Exit terminal, vim keybind because of frequent typos xD
+alias :q='exit'
 
 # Volume control
 alias vol='amixer -D pulse sset Master '
