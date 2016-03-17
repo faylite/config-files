@@ -10,9 +10,12 @@ sepL2=""
 sepR=""
 sepR2=""
 
-# Get currently playing track info from deadbeef
-current_title=$(deadbeef --nowplaying-tf "%title%")
-current_artist=$(deadbeef --nowplaying-tf "%title%")
+if env | grep -q ^TMUX_ENABLE_DEADBEEF=
+then
+	# Get currently playing track info from deadbeef
+	current_title=$(deadbeef --nowplaying-tf "%title%")
+	current_artist=$(deadbeef --nowplaying-tf "%title%")
+fi
 # Get current date in logial format ;)
 current_date=$(date +%d-%m-%Y)
 current_time=$(date +%H:%M)
@@ -21,10 +24,13 @@ current_day=$(date +%a)
 # Build the status line
 ret=""
 
-# --- Currently Playing deadbeef track ---
-ret+="#[fg=colour237]$sepR#[fg=white]#[bg=colour237]"
-ret+="#[fg=colour202]$sepR#[fg=white]#[bg=colour202]"
-ret+=" ♪ $current_title "
+if env | grep -q ^TMUX_ENABLE_DEADBEEF=
+then
+	# --- Currently Playing deadbeef track ---
+	ret+="#[fg=colour237]$sepR#[fg=white]#[bg=colour237]"
+	ret+="#[fg=colour202]$sepR#[fg=white]#[bg=colour202]"
+	ret+=" ♪ $current_title "
+fi
 
 # --- Current Date
 ret+="#[fg=colour238]$sepR#[fg=white]#[bg=colour238]"
