@@ -117,8 +117,6 @@ export VISUAL=$EDITOR
 # Add extra aliases
 source ~/.config-files/.zsh-aliases.zsh
 
-export VAGRANT_HOME="/media/benjamin/Data/vagrant/.vagrant.d"
-
 # Create custom env setup file if it doesn't exist
 touch ~/.local_env.sh
 # source custom PATH for this system
