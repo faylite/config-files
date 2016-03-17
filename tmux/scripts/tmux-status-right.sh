@@ -4,13 +4,15 @@
 # Custom tmux line, left side
 # Made to be modular and easy to change
 
+source ~/.local_env.sh
+
 # Separators REQUIRES POWERLINE PATCHED FONTS!
 sepL=""
 sepL2=""
 sepR=""
 sepR2=""
 
-if env | grep -q ^TMUX_ENABLE_DEADBEEF=
+if [ "$TMUX_ENABLE_DEADBEEF" = "TRUE" ]
 then
 	# Get currently playing track info from deadbeef
 	current_title=$(deadbeef --nowplaying-tf "%title%")
@@ -24,7 +26,7 @@ current_day=$(date +%a)
 # Build the status line
 ret=""
 
-if env | grep -q ^TMUX_ENABLE_DEADBEEF=
+if [ "$TMUX_ENABLE_DEADBEEF" = "TRUE" ]
 then
 	# --- Currently Playing deadbeef track ---
 	ret+="#[fg=colour237]$sepR#[fg=white]#[bg=colour237]"
