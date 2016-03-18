@@ -9,6 +9,7 @@ alias tkill='tmux kill-session -t'
 alias ga='git add'
 alias gc='git commit'
 alias gp='git push origin'
+alias gl='git log --graph --oneline --decorate --abbrev-commit --all'
 alias s='git status'
 
 # Edit config file shortcuts
