@@ -17,6 +17,7 @@ alias ev='vim ~/.vimrc'
 alias et='vim ~/.tmux.conf'
 alias ez='vim ~/.zshrc'
 alias ep='vim ~/.local_env.sh'
+alias ea='vim ~/.config-files/.zsh-aliases.zsh'
 
 # Commonly used programs
 alias v='vim'
