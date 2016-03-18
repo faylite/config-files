@@ -19,6 +19,10 @@ alias ez='vim ~/.zshrc'
 alias ep='vim ~/.local_env.sh'
 alias ea='vim ~/.config-files/.zsh-aliases.zsh'
 
+# Dev Tools
+# GDB quiet startup
+alias gdb='gdb -q'
+
 # Commonly used programs
 alias v='vim'
 
