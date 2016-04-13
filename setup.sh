@@ -22,6 +22,7 @@ rm ~/.vimrc
 ln -s ~/.config-files/.vimrc ~/.vimrc
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cp ~/.config-files/vim/colors/jellybeans.vim ~/.vim/colors/.
+vim -c PluginInstall
 
 # Tmux
 rm ~/.tmux.conf
