@@ -129,6 +129,8 @@ Plugin 'StanAngeloff/php.vim'
 Plugin 'tmux-plugins/vim-tmux'
 " Laravel Blade
 Plugin 'jwalton512/vim-blade'
+" PowerShell
+Plugin 'PProvost/vim-ps1'
 
 " All Plugins must be added before the following line
 call vundle#end()			" required
