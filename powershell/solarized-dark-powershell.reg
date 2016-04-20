@@ -26,7 +26,7 @@ Windows Registry Editor Version 5.00
 ; 15  BrightWhite  White        base3      #fdf6e3  00e3f6fd
 ;
 
-[HKEY_CURRENT_USER\Console\PowerShell]
+[HKEY_CURRENT_USER\Console\Windows PowerShell]
 "ColorTable00"=dword:00362b00
 "ColorTable01"=dword:00969483
 "ColorTable02"=dword:00756e58
