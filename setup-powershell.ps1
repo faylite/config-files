@@ -19,3 +19,6 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 mkdir ~/vimfiles/colors
 cp ~/.config-files/vim/colors/jellybeans.vim ~/vimfiles/colors/.
 vim -c PluginInstall
+
+echo Remember to create a shortcut with the name "PowerShell" to use new color scheme
+
