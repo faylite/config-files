@@ -5,6 +5,10 @@
 # Setup config directory
 mkdir ~/.psconf
 
+# Install themes for CMD and PowerShell
+regedit /s ./powershell/solarized-dark-powershell.reg
+regedit /s ./powershell/solarized-dark-cmd.reg
+
 # Setup aliases
 # TODO: Add aliases
 
