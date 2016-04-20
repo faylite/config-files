@@ -88,13 +88,13 @@
     </Color>
     <Color>
       <A>255</A>
-      <R>238</R>
-      <G>232</G>
-      <B>213</B>
+      <R>0</R>
+      <G>43</G>
+      <B>54</B>
       <ScA>1</ScA>
-      <ScR>0.8549926</ScR>
-      <ScG>0.8069523</ScG>
-      <ScB>0.665387332</ScB>
+      <ScR>0</ScR>
+      <ScG>0.024157634</ScG>
+      <ScB>0.0368894525</ScB>
     </Color>
     <Color>
       <A>255</A>
@@ -108,13 +108,13 @@
     </Color>
     <Color>
       <A>255</A>
-      <R>238</R>
-      <G>232</G>
-      <B>213</B>
+      <R>0</R>
+      <G>43</G>
+      <B>54</B>
       <ScA>1</ScA>
-      <ScR>0.8549926</ScR>
-      <ScG>0.8069523</ScG>
-      <ScB>0.665387332</ScB>
+      <ScR>0</ScR>
+      <ScG>0.024157634</ScG>
+      <ScB>0.0368894525</ScB>
     </Color>
     <Color>
       <A>255</A>
@@ -128,13 +128,13 @@
     </Color>
     <Color>
       <A>255</A>
-      <R>238</R>
-      <G>232</G>
-      <B>213</B>
+      <R>0</R>
+      <G>43</G>
+      <B>54</B>
       <ScA>1</ScA>
-      <ScR>0.8549926</ScR>
-      <ScG>0.8069523</ScG>
-      <ScB>0.665387332</ScB>
+      <ScR>0</ScR>
+      <ScG>0.024157634</ScG>
+      <ScB>0.0368894525</ScB>
     </Color>
     <Color>
       <A>255</A>
@@ -148,43 +148,43 @@
     </Color>
     <Color>
       <A>255</A>
-      <R>238</R>
-      <G>232</G>
-      <B>213</B>
+      <R>0</R>
+      <G>43</G>
+      <B>54</B>
       <ScA>1</ScA>
-      <ScR>0.8549926</ScR>
-      <ScG>0.8069523</ScG>
-      <ScB>0.665387332</ScB>
+      <ScR>0</ScR>
+      <ScG>0.024157634</ScG>
+      <ScB>0.0368894525</ScB>
     </Color>
     <Color>
       <A>255</A>
-      <R>253</R>
-      <G>246</G>
-      <B>227</B>
+      <R>0</R>
+      <G>43</G>
+      <B>54</B>
       <ScA>1</ScA>
-      <ScR>0.9822506</ScR>
-      <ScG>0.921581864</ScG>
-      <ScB>0.768151164</ScB>
+      <ScR>0</ScR>
+      <ScG>0.024157634</ScG>
+      <ScB>0.0368894525</ScB>
     </Color>
     <Color>
       <A>255</A>
-      <R>253</R>
-      <G>246</G>
-      <B>227</B>
+      <R>0</R>
+      <G>43</G>
+      <B>54</B>
       <ScA>1</ScA>
-      <ScR>0.9822506</ScR>
-      <ScG>0.921581864</ScG>
-      <ScB>0.768151164</ScB>
+      <ScR>0</ScR>
+      <ScG>0.024157634</ScG>
+      <ScB>0.0368894525</ScB>
     </Color>
     <Color>
       <A>255</A>
-      <R>101</R>
-      <G>123</G>
-      <B>131</B>
+      <R>131</R>
+      <G>148</G>
+      <B>150</B>
       <ScA>1</ScA>
-      <ScR>0.130136475</ScR>
-      <ScG>0.198069319</ScG>
-      <ScB>0.2269659</ScB>
+      <ScR>0.2269659</ScR>
+      <ScG>0.2961383</ScG>
+      <ScB>0.304987341</ScB>
     </Color>
     <Color>
       <A>255</A>
@@ -807,7 +807,7 @@
       <ScB>0.304987341</ScB>
     </Color>
   </Values>
-  <Name>Solarized</Name>
-  <FontFamily>Lucida Console</FontFamily>
-  <FontSize>10</FontSize>
+  <Name>Faylite-Solarized</Name>
+  <FontFamily>Roboto Mono for Powerline</FontFamily>
+  <FontSize>12</FontSize>
 </StorableColorTheme>
