@@ -13,6 +13,10 @@ ln -s ~/.config-files/faylite.zsh-theme ~/.oh-my-zsh/custom/themes/faylite.zsh-t
 # Create the local_env script if it doesn't exist, sourced by zsh for env variables that shouldn't be in version control
 touch ~/.local_env.sh
 
+# Bash
+# Load aliases into bash
+echo source ~/.config-files/.bash-aliases.sh >> ~/.bashrc
+
 # ZSH
 rm ~/.zshrc
 ln -s ~/.config-files/.zshrc ~/.zshrc
