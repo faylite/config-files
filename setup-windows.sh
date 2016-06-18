@@ -6,11 +6,12 @@
 touch ~/.local_env.sh
 
 # Setup aliases
-cat aliases.sh >> ~/.bashrc
+echo source ~/.config-files/aliases.sh >> ~/.bashrc
 
 # VIM
 rm ~/.vimrc
 ln -s ~/.config-files/.vimrc ~/.vimrc
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+mkdir ~/.vim/colors/
 cp ~/.config-files/vim/colors/jellybeans.vim ~/.vim/colors/.
 vim -c PluginInstall
