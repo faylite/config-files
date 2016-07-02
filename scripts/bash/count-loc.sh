@@ -8,7 +8,7 @@ count-loc() {
 	then
 		echo Counts lines of code in a file
 		echo Parameters: 
-		echo -t 		Return only the total lines of code in all files found
+		echo -t -T 		Return only the total lines of code in all files found
 		echo -a -A		Return the total lines of code in all files individually and the total
 		echo -h			Shows this help menu
 		echo Example: 
@@ -16,13 +16,13 @@ count-loc() {
 		return
 	fi
 
-	if [[ ( -z "$2" ) || ( "$2" == "-t" ) ]]
+	if [[ ( -z "$2" ) || ( "$2" == "-t" ) || ( "$2" == "-T" ) ]]
 	then
 		( find ./ -name $1 -print0 | xargs -0 cat ) | wc -l
 	fi
 	
 	if [[ ( "$2" == "-a") || ( "$2" == "-A" ) ]]
 	then
-		find . -name '*.cs' | xargs wc -l
+		find . -name $1 | xargs wc -l
 	fi
 }
