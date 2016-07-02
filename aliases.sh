@@ -18,3 +18,6 @@ alias v="vim"
 alias vi="vim"
 alias eb="vim ~/.bashrc"
 alias ev="vim ~/.vimrc"
+
+# Load all functions from the bash script directory
+for f in ~/.config-files/scripts/bash/*; do source $f; done
