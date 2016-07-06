@@ -1,17 +1,41 @@
-" ----- General -----
+" --------------------------------------------------------------------------------------------
+" |                                      General                                             |
+" --------------------------------------------------------------------------------------------
+
 " Autmoatically change working directory to current file
 " Disabled for fuzzy search
 " set autochdir
 
-" ----- Visual ------
+" --------------------------------------------------------------------------------------------
+" |                                      Mappings                                            |
+" --------------------------------------------------------------------------------------------
+
+" Set the default leader key to ',' instead of '\'
+let mapleader = ','
+
+" Mapping to edit .vimrc
+nmap <Leader>ev :tabedit ~/.vimrc<cr>
+
+" Escape shortcut
+ino jj <esc>
+
+" ---- Auto-Commands ----
+
+" Create a group to prevent commands getting added multiple times on source
+augroup autosourcing
+	autocmd!
+	" Automatically source the .vimrc file on save
+	autocmd BufWritePost .vimrc source %
+augroup end
+
+" --------------------------------------------------------------------------------------------
+" |                                      Visual Stuff                                        |
+" --------------------------------------------------------------------------------------------
 
 " Turn on syntax highlighting
 syntax on
 
-" Font
-
 " Set colorscheme
-" Downloaded good ones, luinnar
 colorscheme jellybeans " Some good ones, pablo / koehler / desert / slate
 
 " Set scrolloff area, I like to keep my selected line high
@@ -129,8 +153,10 @@ Plugin 'StanAngeloff/php.vim'
 Plugin 'tmux-plugins/vim-tmux'
 " Laravel Blade
 Plugin 'jwalton512/vim-blade'
-" PowerShell
+" Powershell
 Plugin 'PProvost/vim-ps1'
+" C#.NET
+Plugin 'OrangeT/vim-csharp'
 
 " All Plugins must be added before the following line
 call vundle#end()			" required
