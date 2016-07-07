@@ -50,7 +50,7 @@ touch ~/.local_env.sh
 
 # Bash
 # Load aliases into bash
-echo source ~/.config-files/.bash-aliases.sh >> ~/.bashrc
+printf "\nsource ~/.config-files/aliases.sh\n" >> ~/.bashrc
 
 # ------------------------------------------------------- #
 #                      Vim                                #
