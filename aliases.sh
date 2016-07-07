@@ -1,8 +1,10 @@
 # Navigation
-alias l="ls -l"
-alias ll="ls -la"
+alias l="ls -la"
+alias ll="ls -l"
 alias c="clear"
+alias cls="clear"
 alias ..="cd .."
+alias ..="cd ../.."
 alias :q="exit"
 
 # Git
@@ -16,8 +18,39 @@ alias gp="git push"
 # Vim
 alias v="vim"
 alias vi="vim"
-alias eb="vim ~/.bashrc"
 alias ev="vim ~/.vimrc"
+alias eb="vim ~/.bashrc"
+# Edit config file shortcuts
+alias ez='vim ~/.zshrc'
+alias ep='vim ~/.local_env.sh'
+alias ea='vim ~/.config-files/.zsh-aliases.zsh'
+
+# Linux specific
+if [ -z "$(command -v yum)" || -z "$(command -v apt-get)" ]
+then
+	# Dev Tools
+	# GDB quiet startup
+	alias gdb='gdb -q'
+
+	# Command = double clicking file
+	alias o='xdg-open'
+
+	# Volume control
+	alias vol='amixer -D pulse sset Master '
+	alias volup='amixer -D pulse sset Master 5%+'
+	alias voldown='amixer -D pulse sset Master 5%-'
+fi
+
+# Tmux
+if [ -z "$(command -v tmux)"]
+then
+	alias t='tmux'
+	alias ta='tmux attach -t'
+	alias tnew='tmux new -s'
+	alias tls='tmux ls'
+	alias tkill='tmux kill-session -t'
+	alias et='vim ~/.tmux.conf'
+fi
 
 # Load all functions from the bash script directory
 for f in ~/.config-files/scripts/bash/*; do source $f; done
