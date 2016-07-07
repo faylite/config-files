@@ -5,12 +5,12 @@
 # ------------------------------------------------------- #
 #               Install applications                      #
 # ------------------------------------------------------- #
-$packages = "zsh vim tmux weechat exuberant-ctags curl"
+packages="zsh vim tmux weechat exuberant-ctags curl"
 
 # ------------------------------------------------------- #
 #                     apt-get                             #
 # ------------------------------------------------------- #
-if [ -z "$(command -v yum)" ]
+if [ ! -z "$(command -v yum)" ]
 then
 	sudo yum check-update
 	sudo yum -y install $packages
@@ -19,7 +19,7 @@ fi
 # ------------------------------------------------------- #
 #                     yum                                 #
 # ------------------------------------------------------- #
-if [ -z "$(command -v apt-get)" ]
+if [ ! -z "$(command -v apt-get)" ]
 then
 	sudo apt-get update
 	sudo apt-get install -y $packages
@@ -29,7 +29,7 @@ fi
 #               Setup zsh and oh-my-zsh                   #
 # ------------------------------------------------------- #
 # If zsh is installed
-if [ -z "$(command -v zsh)" ]
+if [ ! -z "$(command -v zsh)" ]
 then
 	# Setup zsh
 	rm ~/.zshrc
@@ -55,7 +55,7 @@ echo source ~/.config-files/.bash-aliases.sh >> ~/.bashrc
 # ------------------------------------------------------- #
 #                      Vim                                #
 # ------------------------------------------------------- #
-if [ -z "$(command -v vim)" ]
+if [ ! -z "$(command -v vim)" ]
 then
 	rm ~/.vimrc
 	ln -s ~/.config-files/dotfiles/.vimrc ~/.vimrc
@@ -68,7 +68,7 @@ fi
 # ------------------------------------------------------- #
 #                      Tmux                               #
 # ------------------------------------------------------- #
-if [ -z "$(command -v tmux)" ]
+if [ ! -z "$(command -v tmux)" ]
 then
 	rm ~/.tmux.conf
 	ln -s ~/.config-files/dotfiles/.tmux.conf ~/.tmux.conf
@@ -77,7 +77,7 @@ fi
 # ------------------------------------------------------- #
 #                      Weechat                            #
 # ------------------------------------------------------- #
-if [ -z "$(command -v weechat)" ]
+if [ ! -z "$(command -v weechat)" ]
 then
 	rm ~/.weechat/weechat.conf
 	ln -s ~/.config-files/weechat.conf ~/.weechat/weechat.conf
@@ -86,7 +86,7 @@ fi
 # ------------------------------------------------------- #
 #                   GNU Debugger                          #
 # ------------------------------------------------------- #
-if [ -z "$(command -v gdb)" ]
+if [ ! -z "$(command -v gdb)" ]
 then
 	rm ~/.gdbinit
 	ln -s ~/.config-files/dotfiles/.gdbinit ~/.gdbinit

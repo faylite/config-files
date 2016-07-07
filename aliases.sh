@@ -25,7 +25,7 @@ alias ep='vim ~/.local_env.sh'
 alias ea='vim ~/.config-files/.zsh-aliases.zsh'
 
 # Linux specific
-if [ -z "$(command -v yum)" || -z "$(command -v apt-get)" ]
+if [ ! -z "$(command -v yum)" || -z "$(command -v apt-get)" ]
 then
 	# Dev Tools
 	# GDB quiet startup
@@ -41,7 +41,7 @@ then
 fi
 
 # Tmux
-if [ -z "$(command -v tmux)"]
+if [ ! -z "$(command -v tmux)"]
 then
 	alias t='tmux'
 	alias ta='tmux attach -t'
