@@ -59,7 +59,11 @@ if [ ! -z "$(command -v vim)" ]
 then
 	rm ~/.vimrc
 	ln -s ~/.config-files/dotfiles/.vimrc ~/.vimrc
-	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+	# Install vundle
+	if [ ! -d ~/.vim/bundle ]
+	then
+		git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+	fi
 	ln -s ~/.config-files/vim/colors ~/.vim/colors
 	# Run vim command and exit
 	vim +BundleInstall +qall
