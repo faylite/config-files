@@ -60,7 +60,7 @@ then
 	rm ~/.vimrc
 	ln -s ~/.config-files/.vimrc ~/.vimrc
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-	cp ~/.config-files/vim/colors/jellybeans.vim ~/.vim/colors/.
+	ln -s ~/.config-files/vim/colors ~/.vim/colors
 	# Run vim command and exit
 	vim +BundleInstall +qall
 fi
