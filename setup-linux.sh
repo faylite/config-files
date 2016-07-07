@@ -33,7 +33,7 @@ if [ -z "$(command -v zsh)" ]
 then
 	# Setup zsh
 	rm ~/.zshrc
-	ln -s ~/.config-files/.zshrc ~/.zshrc
+	ln -s ~/.config-files/dotfiles/.zshrc ~/.zshrc
 		
 	# Setup oh-my-zsh
 	sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -58,7 +58,7 @@ echo source ~/.config-files/.bash-aliases.sh >> ~/.bashrc
 if [ -z "$(command -v vim)" ]
 then
 	rm ~/.vimrc
-	ln -s ~/.config-files/.vimrc ~/.vimrc
+	ln -s ~/.config-files/dotfiles/.vimrc ~/.vimrc
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 	ln -s ~/.config-files/vim/colors ~/.vim/colors
 	# Run vim command and exit
@@ -71,7 +71,7 @@ fi
 if [ -z "$(command -v tmux)" ]
 then
 	rm ~/.tmux.conf
-	ln -s ~/.config-files/.tmux.conf ~/.tmux.conf
+	ln -s ~/.config-files/dotfiles/.tmux.conf ~/.tmux.conf
 fi
 
 # ------------------------------------------------------- #
@@ -89,5 +89,5 @@ fi
 if [ -z "$(command -v gdb)" ]
 then
 	rm ~/.gdbinit
-	ln -s ~/.config-files/.gdbinit ~/.gdbinit
+	ln -s ~/.config-files/dotfiles/.gdbinit ~/.gdbinit
 fi
