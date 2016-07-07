@@ -20,7 +20,6 @@ alias v="vim"
 alias vi="vim"
 alias ev="vim ~/.vimrc"
 alias eb="vim ~/.bashrc"
-# Edit config file shortcuts
 alias ez='vim ~/.zshrc'
 alias ep='vim ~/.local_env.sh'
 alias ea='vim ~/.config-files/.zsh-aliases.zsh'
