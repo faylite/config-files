@@ -115,7 +115,7 @@ export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 
 # Add extra aliases
-source ~/.config-files/.zsh-aliases.zsh
+source ~/.config-files/aliases.sh
 
 # Create custom env setup file if it doesn't exist
 touch ~/.local_env.sh
