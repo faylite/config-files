@@ -83,6 +83,7 @@ fi
 # ------------------------------------------------------- #
 if [ ! -z "$(command -v weechat)" ]
 then
+	mkdir ~/.weechat/
 	rm ~/.weechat/weechat.conf
 	ln -s -T ~/.config-files/weechat.conf ~/.weechat/weechat.conf
 fi
