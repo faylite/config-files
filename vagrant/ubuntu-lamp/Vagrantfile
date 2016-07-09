@@ -9,4 +9,10 @@ Vagrant.configure(2) do |config|
 
 	# Forward the host port 8080 to port 80 on this guest machine
 	config.vm.network "forwarded_port", guest: 80, host: 8080
+
+	# Disable the default vagrant shared folder
+	config.vm.synced_folder ".", "/vagrant", disabled: true
+	
+	# Share the site folder with the virtual machine
+	config.vm.synced_folder "./site/" , "/var/www/site/" , owner: "www-data", group: "www-data"
 end
