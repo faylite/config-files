@@ -8,6 +8,14 @@
 packages="zsh vim tmux weechat exuberant-ctags curl"
 
 # ------------------------------------------------------- #
+#             pact (babun windows Cygwin)                 #
+# ------------------------------------------------------- #
+if [ ! -z "$(command -v pact)" ]
+then
+	pact install $packages
+fi
+
+# ------------------------------------------------------- #
 #                     apt-get                             #
 # ------------------------------------------------------- #
 if [ ! -z "$(command -v yum)" ]
