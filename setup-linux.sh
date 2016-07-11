@@ -81,7 +81,9 @@ then
 		git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 	fi
 	ln -s -T ~/.config-files/vim/colors ~/.vim/colors
-	# Run vim command and exit
+	# Create directories for the special vim files
+	mkdir ~/.vim/backup ~/.vim/swap ~/.vim/undo
+	# Run vim command to install all the vundle plugins and exit
 	vim +BundleInstall +qall
 fi
 
