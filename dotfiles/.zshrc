@@ -68,6 +68,11 @@ plugins=(git z nmap sudo vagrant gradle gitignore web-search composer laravel5 n
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # export MANPATH="/usr/local/man:$MANPATH"
 
+if [ -d "$HOME/bin" ];
+then
+	export PATH="$home/bin:$PATH"
+fi
+
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
