@@ -71,11 +71,20 @@ set novisualbell
 " Autmoatically change working directory to the same directory as the current file (Disabled for fuzzy search)
 " set autochdir
 
-" Turn off vim bacups, I have git for that....
-set nobackup
+" Set vim special files to use directories in the .vim directory to keep them
+" out of sight for when you actually need them
+" Turn on vim backups
+set backup
+set backupdir=~/.vim/backup//
 
-" Turn off annoying .swp files
-set noswapfile
+" Turn on swap file incase vim crashes
+set swapfile
+set directory=~/.vim/swap//
+
+" Turn on persistent undos, this will make your undo history available after
+" closing and re-opening vim
+set undodir=~/.vim/undo//
+set undofile
 
 " Show matching bracket
 set showmatch

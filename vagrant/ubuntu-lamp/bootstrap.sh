@@ -24,9 +24,9 @@ sed -i '/html_errors = Off/c html_errors = on' /etc/php5/apache2/php.ini
 VHOST=$(cat <<EOF
 <VirtualHost *:80>
 	ServerAdmin webmaster@localhost
-	DocumentRoot /var/www/site
+	DocumentRoot /var/www/site/public
 
-	<Directory /var/www/site>
+	<Directory /var/www/site/public>
 		AllowOverride all
 		Require all granted
 	</Directory>
@@ -46,3 +46,6 @@ sudo a2enmod rewrite
 
 # Restart apache2
 service apache2 restart
+
+# Run installation script for the project
+(cd /var/www/site/ && php install.php)
