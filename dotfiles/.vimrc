@@ -7,7 +7,7 @@ source ~/.config-files/vim/plugins.vim
 
 " ---- CtrlP ----
 let g:ctrlp_custom_ignore = {
-			\ 'dir': '\.git$\|\vendor$|node_modules'
+			\ 'dir': '\.git$\|\vendor$|node_modules|bower_components'
 			\}
 
 " --------------------------------------------------------------------------------------------
