@@ -1,5 +1,17 @@
 " --------------------------------------------------------------------------------------------
-"|                                       Mappings                                             |
+" |									     Plugins                                             |
+" --------------------------------------------------------------------------------------------
+
+" Source Plugins file
+source ~/.config-files/vim/plugins.vim
+
+" ---- CtrlP ----
+let g:ctrlp_custom_ignore = {
+			\ 'dir': '\.git$\|\vendor$|node_modules'
+			\}
+
+" --------------------------------------------------------------------------------------------
+" |										 Mappings											 |
 " --------------------------------------------------------------------------------------------
 
 " Set the default leader key to ',' instead of '\'
@@ -7,25 +19,25 @@ let mapleader = ','
 
 " Mapping to edit .vimrc
 nmap <Leader>ev :e ~/.vimrc<cr>
+" Mapping to edit vim plugins file
 nmap <Leader>ep :e ~/.config-files/vim/plugins.vim<cr>
 
-" Escape shortcut
-ino jj <esc>
+" Insert brackets
+ino <Leader>ib {}
+" Insert square brackets
+ino <Leader>isb []
+" Insert parentheses
+ino <Leader>isp ()
 
 " Go to end of line
 nmap <Leader><Leader>e $
 " Go to start of line
 nmap <Leader><Leader>s 0
 
-" --------------------------------------------------------------------------------------------
-"|                                     Visual Stuff                                           |
-" --------------------------------------------------------------------------------------------
+" Escape shortcut
+ino jj <esc>
 
-" Turn on syntax highlighting
-syntax on
-
-" Set colorscheme
-colorscheme jellybeans " Some good ones, pablo / koehler / desert / slate
+nmap <Leader><Leader><Leader><Leader><Leader> ichameleon
 
 " --------------------------------------------------------------------------------------------
 "|                                      Auto-Commands                                         |
@@ -36,20 +48,26 @@ augroup autosourcing
 	autocmd!
 	" Automatically source the .vimrc file on save
 	autocmd BufWritePost .vimrc source %
-	autocmd BufWritePost plugins.vim source ~/.vimrc :PluginInstall
+	autocmd BufWritePost plugins.vim source ~/.vimrc
+	autocmd BufWritePost plugins.vim :PluginInstall
+	autocmd BufWritePost plugins.vim :bd \[Vundle]\ Installer
 augroup end
 
-" Source Plugins file
-source ~/.config-files/vim/plugins.vim
-
-
 " --------------------------------------------------------------------------------------------
-"|                                        General                                             |
+" |										 Visual Stuff										 |
 " --------------------------------------------------------------------------------------------
 
-" Set scrolloff area, I like to keep my selected line high
-set scrolloff=10
+" Turn on syntax highlighting
+syntax on
 
+" Set colorscheme
+colorscheme jellybeans " Some good ones, pablo / koehler / desert / slate
+
+" --------------------------------------------------------------------------------------------
+" |                                       General                                            |
+" --------------------------------------------------------------------------------------------
+
+" ---- Info ----
 
 " This shows what you are typing as a command.
 set showcmd
@@ -57,19 +75,38 @@ set showcmd
 " Displays current mode
 set showmode
 
-" Set backspace button to work normally -.-
-set backspace=2
+" Line numbers
+" set number
 
-" Tab width
+" Relative line numbers
+set relativenumber
+
+" ---- Display Options ----
+
+" Set scrolloff area, I like to keep my selected line high
+set scrolloff=10
+
+" Indent width
 set shiftwidth=4
 set tabstop=4
+
+" Show matching bracket
+set showmatch
+
+" ---- General ----
+
+" Autmoatically change working directory to current file
+" Disabled for fuzzy search
+" set autochdir
+
+" Set backspace button to work normally -.-
+set backspace=2
 
 " Turn off error bells
 set noerrorbells
 set novisualbell
 
-" Autmoatically change working directory to the same directory as the current file (Disabled for fuzzy search)
-" set autochdir
+" ---- Vim system files ----
 
 " Set vim special files to use directories in the .vim directory to keep them
 " out of sight for when you actually need them
@@ -85,10 +122,3 @@ set directory=~/.vim/swap//
 " closing and re-opening vim
 set undodir=~/.vim/undo//
 set undofile
-
-" Show matching bracket
-set showmatch
-
-" Indentation
-set autoindent
-set smartindent
