@@ -4,7 +4,7 @@ alias ll="ls -l"
 alias c="clear"
 alias cls="clear"
 alias ..="cd .."
-alias ..="cd ../.."
+alias ...="cd ../.."
 alias :q="exit"
 
 # Git
