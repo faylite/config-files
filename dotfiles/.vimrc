@@ -39,6 +39,11 @@ ino jj <esc>
 
 nmap <Leader><Leader><Leader><Leader><Leader> ichameleon
 
+" Plugins
+
+" NERDTree
+nmap <Leader>n :NERDTreeToggle<cr>
+
 " --------------------------------------------------------------------------------------------
 "|                                      Auto-Commands                                         |
 " --------------------------------------------------------------------------------------------
