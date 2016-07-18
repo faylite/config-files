@@ -91,7 +91,12 @@ set relativenumber
 " Set scrolloff area, I like to keep my selected line high
 set scrolloff=10
 
+" Filetype specific settings
+filetype plugin indent on
+
 " Indent width
+set autoindent
+set cindent
 set shiftwidth=4
 set tabstop=4
 
