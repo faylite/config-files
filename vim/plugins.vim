@@ -81,6 +81,11 @@ Plugin 'PProvost/vim-ps1'
 " C#.NET
 Plugin 'OrangeT/vim-csharp'
 
+" HTML5
+Plugin 'othree/html5.vim'
+" Show matching tags
+Plugin 'gregsexton/matchtag'
+
 " All Plugins must be added before the following line
 call vundle#end()			" required
 filetype plugin indent on	" required
