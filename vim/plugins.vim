@@ -83,8 +83,11 @@ Plugin 'OrangeT/vim-csharp'
 
 " HTML5
 Plugin 'othree/html5.vim'
+Plugin 'captbaritone/better-indent-support-for-php-with-html'
 " Show matching tags
 Plugin 'gregsexton/matchtag'
+" Twig
+Plugin 'evidens/vim-twig'
 
 " All Plugins must be added before the following line
 call vundle#end()			" required
