@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Author: Faylite
-# Custom tmux line, left side
+# Custom tmux line, right side
 # Made to be modular and easy to change
 
 source ~/.local_env.sh
