@@ -47,14 +47,15 @@ fi
 # If zsh is installed
 if [ ! -z "$(command -v zsh)" ]
 then
-	# Setup zsh
-	rm ~/.zshrc
-	ln -s -T ~/.config-files/dotfiles/.zshrc ~/.zshrc
-		
 	# Setup oh-my-zsh
 	sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 	mkdir ~/.oh-my-zsh/custom/themes
 	ln -s -T ~/.config-files/faylite.zsh-theme ~/.oh-my-zsh/custom/themes/faylite.zsh-theme
+
+	# Setup zsh
+	rm ~/.zshrc
+	ln -s -T ~/.config-files/dotfiles/.zshrc ~/.zshrc
+		
 fi
 
 
