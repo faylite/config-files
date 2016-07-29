@@ -15,8 +15,8 @@ sepR2=""
 if [ "$TMUX_ENABLE_DEADBEEF" = "TRUE" ]
 then
 	# Get currently playing track info from deadbeef
-	current_title=$(deadbeef --nowplaying-tf "%title%")
-	current_artist=$(deadbeef --nowplaying-tf "%title%")
+	current_title=$(deadbeef --nowplaying-tf "%title%" | cut -c 1-15)
+	current_artist=$(deadbeef --nowplaying-tf "%artist%" | cut -c 1-15)
 fi
 # Get current date in logial format ;)
 current_date=$(date +%d-%m-%Y)
@@ -31,7 +31,7 @@ then
 	# --- Currently Playing deadbeef track ---
 	ret+="#[fg=colour237]$sepR#[fg=white]#[bg=colour237]"
 	ret+="#[fg=colour202]$sepR#[fg=white]#[bg=colour202]"
-	ret+=" ♪ $current_title "
+	ret+=" ♪ $current_title - $current_artist "
 fi
 
 # --- Current Date
