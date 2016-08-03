@@ -25,6 +25,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+set laststatus=2
+
 " Enable powerline fonts
 let g:airline_powerline_fonts = 1
 
