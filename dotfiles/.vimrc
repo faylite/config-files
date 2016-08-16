@@ -7,8 +7,9 @@ source ~/.config-files/vim/plugins.vim
 
 " ---- CtrlP ----
 let g:ctrlp_custom_ignore = {
-			\ 'dir': '\.git$\|\vendor$|node_modules|bower_components'
+			\ 'dir': '\.git$\|\vendor$|node_modules|bower_components|public/[^.;]+'
 			\}
+" (public/[^,;]+) matches subdirectories and files without '.'
 
 " --------------------------------------------------------------------------------------------
 " |										 Mappings											 |
