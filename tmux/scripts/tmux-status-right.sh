@@ -68,11 +68,12 @@ then
 			ret+="#[fg=colour149]$sepR#[fg=black]"
 			ret+="#[bg=colour149]"
 		fi
+		ret+=" $bat_percent%% "
 	else
 		ret+="#[fg=colour149]$sepR#[fg=black]"
 		ret+="#[bg=colour149]"
+		ret+=" +$bat_percent%% "
 	fi
-	ret+=" $bat_percent%% "
 fi
 
 # Output new status line
