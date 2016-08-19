@@ -65,8 +65,8 @@ Plugin 'honza/vim-snippets'
 " Surround with
 Plugin 'tpope/vim-surround'
 
-" Tab completion
-Plugin 'ervandew/supertab'
+" Code completion
+Plugin 'Valloric/YouCompleteMe'
 
 " ----------------------------------------------
 " |              Syntax Plugins                |
@@ -90,6 +90,9 @@ Plugin 'captbaritone/better-indent-support-for-php-with-html'
 Plugin 'gregsexton/matchtag'
 " Twig
 Plugin 'evidens/vim-twig'
+
+" TypeScript
+Plugin 'HerringtonDarkholme/yats.vim'
 
 " All Plugins must be added before the following line
 call vundle#end()			" required
