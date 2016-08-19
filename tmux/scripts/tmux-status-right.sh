@@ -45,5 +45,35 @@ ret+=" $current_date"
 ret+="#[fg=colour235]$sepR#[bg=colour235]#[fg=blue]$sepR#[bg=blue]#[fg=white]"
 ret+=" ⌚ $current_time "
 
+# --- Battery Status for linux based machines
+if [ "$TMUX_ENABLE_LINUX_BATTERY" = "TRUE" ]
+then
+	bat_full=$(cat /sys/class/power_supply/BAT0/charge_full)
+	bat_now=$(cat /sys/class/power_supply/BAT0/charge_now)
+	bat_status=$(cat /sys/class/power_supply/BAT0/status)
+
+	bat_percent=$((100 * bat_now / bat_full))
+
+	if [ $bat_status = "Discharging" ]
+	then
+		if [[ $bat_percent -lt 20 ]]
+		then
+			ret+="#[fg=colour160]$sepR#[fg=white]"
+			ret+="#[bg=colour160]"
+		elif [[ $bat_percent -lt 60 ]]
+		then
+			ret+="#[fg=colour202]$sepR#[fg=white]"
+			ret+="#[bg=colour202]"
+		else
+			ret+="#[fg=colour149]$sepR#[fg=black]"
+			ret+="#[bg=colour149]"
+		fi
+	else
+		ret+="#[fg=colour149]$sepR#[fg=black]"
+		ret+="#[bg=colour149]"
+	fi
+	ret+=" $bat_percent%% "
+fi
+
 # Output new status line
 printf "$ret"
