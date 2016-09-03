@@ -24,6 +24,10 @@ alias ez='vim ~/.zshrc'
 alias ep='vim ~/.local_env.sh'
 alias ea='vim ~/.config-files/.zsh-aliases.zsh'
 
+# Vagrant boxes
+alias box-init-apache-ubuntu14.04='cp ~/.config-files/vagrant/ubuntu-lamp/14.04/* .'
+alias box-init-apache-ubuntu16.04='cp ~/.config-files/vagrant/ubuntu-lamp/16.04/* .'
+
 # Linux specific
 if [[ !( -z "$(command -v yum)" ) || ( -z "$(command -v apt-get)" ) ]]
 then
