@@ -10,10 +10,21 @@ debconf-set-selections <<< "mysql-server mysql-server/root_password_again passwo
 # Update package list
 apt-get update
 
-# Install apache2 php5, and mysql
+# Add PHP ppa
+apt-get install python-software-properties
+LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php -y
+
+# Update package list
+apt-get update
+
+# Install apache web server
 apt-get install -y apache2
-apt-get install -y php5
-apt-get install -y mysql-server-5.5 php5-mysql
+# Install php 7
+apt-get install -y php7.0 php7.0-cli php7.0-common php7.0-fpm php7.0-mysql php7.0-mbstring php7.0-gd
+# Install apache php module
+apt-get install -y libapache2-mod-php7.0
+# Install mysql server
+apt-get install -y mysql-server-5.5
 
 # Configure PHP
 sed -i '/display_errors = Off/c display_errors = on' /etc/php5/apache2/php.ini
@@ -46,6 +57,3 @@ sudo a2enmod rewrite
 
 # Restart apache2
 service apache2 restart
-
-# Run installation script for the project
-(cd /var/www/site/ && php install.php)
