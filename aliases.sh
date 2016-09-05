@@ -27,7 +27,7 @@ alias ea='vim ~/.config-files/.zsh-aliases.zsh'
 # Vagrant boxes
 alias box-init-apache-ubuntu14.04='cp ~/.config-files/vagrant/ubuntu-lamp/14.04/* .'
 alias box-init-apache-ubuntu16.04='cp ~/.config-files/vagrant/ubuntu-lamp/16.04/* .'
-alias box-init-laravel='cp ~/.config-files/vagrant/ubuntu-lamp/16.04/* .'
+alias box-init-laravel='cp ~/.config-files/vagrant/laravel/* .'
 
 # Dev tools
 alias artisan='php artisan'
