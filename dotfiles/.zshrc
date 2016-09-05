@@ -59,7 +59,7 @@ ZSH_THEME="faylite"
 # catimg		- Prints an image of a cat
 # rand-quote 	- random quote
 
-plugins=(git z nmap sudo vagrant gradle gitignore web-search composer laravel5 nyan catimg rand-quote lol)
+plugins=(git git-flow z nmap sudo vagrant gradle gitignore web-search composer laravel5 nyan catimg rand-quote lol)
 
 # --------------------------------------
 
