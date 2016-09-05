@@ -59,6 +59,9 @@ augroup autosourcing
 	autocmd BufWritePost plugins.vim :bd \[Vundle]\ Installer
 augroup end
 
+" PSR Complitant indenting
+autocmd Filetype php setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+
 " --------------------------------------------------------------------------------------------
 " |										 Visual Stuff										 |
 " --------------------------------------------------------------------------------------------
