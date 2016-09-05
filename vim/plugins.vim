@@ -71,6 +71,9 @@ Plugin 'Valloric/YouCompleteMe'
 " Emmet HTML super powers
 Plugin 'mattn/emmet-vim'
 
+" Editor config for collabA
+Plugin 'editorconfig/editorconfig-vim'
+
 " ----------------------------------------------
 " |              Syntax Plugins                |
 " ----------------------------------------------
