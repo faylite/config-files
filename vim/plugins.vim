@@ -68,6 +68,9 @@ Plugin 'tpope/vim-surround'
 " Code completion
 Plugin 'Valloric/YouCompleteMe'
 
+" Emmet HTML super powers
+Plugin 'mattn/emmet-vim'
+
 " ----------------------------------------------
 " |              Syntax Plugins                |
 " ----------------------------------------------
