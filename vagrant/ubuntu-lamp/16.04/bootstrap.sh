@@ -12,7 +12,7 @@ apt-get update
 
 # Install apache2 php5, and mysql
 apt-get install -y apache2
-apt-get install -y php5
+apt-get install -y php7
 apt-get install -y mysql-server-5.5 php5-mysql
 
 # Configure PHP
