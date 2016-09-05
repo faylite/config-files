@@ -30,7 +30,7 @@ alias box-init-apache-ubuntu16.04='cp ~/.config-files/vagrant/ubuntu-lamp/16.04/
 alias box-init-laravel='cp ~/.config-files/vagrant/laravel/* .'
 
 # Dev tools
-alias artisan='php artisan'
+alias art='php artisan'
 
 # Linux specific
 if [[ !( -z "$(command -v yum)" ) || ( -z "$(command -v apt-get)" ) ]]
