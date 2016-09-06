@@ -5,7 +5,7 @@
 # ------------------------------------------------------- #
 #               Install applications                      #
 # ------------------------------------------------------- #
-packages="zsh vim tmux weechat exuberant-ctags curl"
+packages="zsh vim tmux weechat exuberant-ctags curl git-flow"
 
 # ------------------------------------------------------- #
 #             pact (babun windows Cygwin)                 #
