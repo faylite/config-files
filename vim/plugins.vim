@@ -71,8 +71,14 @@ Plugin 'Valloric/YouCompleteMe'
 " Emmet HTML super powers
 Plugin 'mattn/emmet-vim'
 
-" Editor config for collabA
+" Editor config for collab
 Plugin 'editorconfig/editorconfig-vim'
+
+" Note-taking, etc
+Plugin 'vimwiki/vimwiki'
+
+" ctags bar (tagbar)
+Plugin 'majutsushi/tagbar'
 
 " ----------------------------------------------
 " |              Syntax Plugins                |

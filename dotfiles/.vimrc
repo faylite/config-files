@@ -45,6 +45,8 @@ nmap <Leader><Leader><Leader><Leader><Leader> ichameleon
 " NERDTree
 nmap <Leader>n :NERDTreeToggle<cr>
 
+" Tagbar
+nmap <Leader>t :TagbarToggle<CR>
 " --------------------------------------------------------------------------------------------
 "|                                      Auto-Commands                                         |
 " --------------------------------------------------------------------------------------------
