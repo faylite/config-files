@@ -24,11 +24,11 @@ nmap <Leader>ev :e ~/.vimrc<cr>
 nmap <Leader>ep :e ~/.config-files/vim/plugins.vim<cr>
 
 " Insert brackets
-ino <Leader>ib {}
+ino <Leader>ib {}<esc>i
 " Insert square brackets
-ino <Leader>isb []
+ino <Leader>isb []<esc>i
 " Insert parentheses
-ino <Leader>isp ()
+ino <Leader>isp ()<esc>i
 
 " Go to end of line
 nmap <Leader><Leader>e $
