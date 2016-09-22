@@ -18,6 +18,7 @@ alias gp="git push"
 # Vim
 alias v="vim"
 alias vi="vim"
+alias vt="vim -t "
 alias ev="vim ~/.vimrc"
 alias eb="vim ~/.bashrc"
 alias ez='vim ~/.zshrc'
