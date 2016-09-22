@@ -35,6 +35,23 @@ nmap <Leader><Leader>e $
 " Go to start of line
 nmap <Leader><Leader>s 0
 
+" -- ctags --
+" Jump to tag
+nmap <Leader>j <c-]>
+
+" Jump to tag in new split
+nmap <Leader>wj <c-w>]
+
+" Preview tag in a preview window
+nmap <Leader>wp <c-w>}
+
+" Return to previous location
+nmap <Leader>r <c-t>
+
+" Show tag stack
+nmap <Leader>ts :tags<cr>
+" --
+
 " Escape shortcut
 ino jj <esc>
 
@@ -45,8 +62,11 @@ nmap <Leader><Leader><Leader><Leader><Leader> ichameleon
 " NERDTree
 nmap <Leader>n :NERDTreeToggle<cr>
 
+" CtrlP
+nmap <Leader>tp :CtrlPTag<cr>
+
 " Tagbar
-nmap <Leader>t :TagbarToggle<CR>
+nmap <Leader>tb :TagbarToggle<cr>
 " --------------------------------------------------------------------------------------------
 "|                                      Auto-Commands                                         |
 " --------------------------------------------------------------------------------------------
