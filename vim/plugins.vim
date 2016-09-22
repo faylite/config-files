@@ -66,7 +66,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-surround'
 
 " Code completion
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'ervandew/supertab'
 
 " Emmet HTML super powers
 Plugin 'mattn/emmet-vim'
@@ -80,16 +80,30 @@ Plugin 'vimwiki/vimwiki'
 " ctags bar (tagbar)
 Plugin 'majutsushi/tagbar'
 
+" Syntastic
+Plugin 'scrooloose/syntastic'
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 " ----------------------------------------------
-" |              Syntax Plugins                |
+" |              Language Plugins              |
 " ----------------------------------------------
+
+" Tmux config file
+Plugin 'tmux-plugins/vim-tmux'
 
 " PHP
 Plugin 'StanAngeloff/php.vim'
-" Tmux config file
-Plugin 'tmux-plugins/vim-tmux'
 " Laravel Blade
 Plugin 'jwalton512/vim-blade'
+
 " Powershell
 Plugin 'PProvost/vim-ps1'
 " C#.NET
