@@ -119,6 +119,8 @@ Plugin 'evidens/vim-twig'
 
 " TypeScript
 Plugin 'HerringtonDarkholme/yats.vim'
+" Vue.js
+Plugin 'posva/vim-vue'
 
 " All Plugins must be added before the following line
 call vundle#end()			" required
