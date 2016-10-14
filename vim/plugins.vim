@@ -1,7 +1,7 @@
 " --------------------------------------------------------------------------------------------
 " |                                      VUNDLE Plugins                                      |
 " --------------------------------------------------------------------------------------------
-	
+
 set nocompatible	" be Improved, required
 filetype off		" required
 
@@ -73,6 +73,12 @@ Plugin 'mattn/emmet-vim'
 
 " Editor config for collab
 Plugin 'editorconfig/editorconfig-vim'
+
+" White space highlighting
+Plugin 'ntpeters/vim-better-whitespace'
+
+" Indentation guides
+Plugin 'nathanaelkane/vim-indent-guides'
 
 " Note-taking, etc
 Plugin 'vimwiki/vimwiki'
