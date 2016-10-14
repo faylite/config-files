@@ -14,6 +14,8 @@ alias gl="git log --graph --oneline --decorate --abbrev-commit --all"
 alias ga="git add"
 alias gc="git commit"
 alias gp="git push"
+alias gfm="git merge --no-ff"
+alias gm="git merge"
 
 # Vim
 alias v="vim"
