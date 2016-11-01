@@ -59,9 +59,6 @@ Plugin 'tomtom/tlib_vim'
 " Snippets
 Plugin 'garbas/vim-snipmate'
 
-" Community maintained snippet repository
-Plugin 'honza/vim-snippets'
-
 " Surround with
 Plugin 'tpope/vim-surround'
 
