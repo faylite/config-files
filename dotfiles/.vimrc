@@ -106,15 +106,19 @@ set showcmd
 " Displays current mode
 set showmode
 
-" Line numbers
+" Regular line numbers
 " set number
 
 " Relative line numbers
+" set relativenumber
+
+" Hybrid mode, relative line numbers with actualy line number on current line
+set number
 set relativenumber
 
 " ---- Display Options ----
 
-" Set scrolloff area, I like to keep my selected line high
+" Set scrolloff area, I like to keep my selected line centered
 set scrolloff=10
 
 " Filetype specific settings

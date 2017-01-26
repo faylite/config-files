@@ -115,6 +115,9 @@ Plugin 'OrangeT/vim-csharp'
 " HTML5
 Plugin 'othree/html5.vim'
 Plugin 'captbaritone/better-indent-support-for-php-with-html'
+Plugin 'sorin-ionescu/vim-htmlvalidator'
+au FileType html compiler html
+au QuickFixCmdPost make cwindow
 " Show matching tags
 Plugin 'gregsexton/matchtag'
 " Twig
@@ -134,6 +137,6 @@ filetype plugin indent on	" required
 " :PluginInstall	- installs plugins; append '!' to update or just :PluginUpdate
 " :PluginSearch foo	- searches for foo; append '!' to refresh local cache
 " :PluginClean		- confirms removal of unused plugins; append '!' to auto-approve removal
-" 
+"
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
