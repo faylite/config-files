@@ -5,7 +5,7 @@
 # ------------------------------------------------------- #
 #               Install applications                      #
 # ------------------------------------------------------- #
-packages="zsh vim tmux weechat exuberant-ctags curl git-flow"
+packages="zsh vim tmux weechat exuberant-ctags curl git-flow i3-wm i3-status"
 
 # ------------------------------------------------------- #
 #             pact (babun windows Cygwin)                 #
@@ -114,4 +114,13 @@ if [ ! -z "$(command -v gdb)" ]
 then
 	rm ~/.gdbinit
 	ln -s -T ~/.config-files/dotfiles/.gdbinit ~/.gdbinit
+fi
+
+# ------------------------------------------------------- #
+#                   GNU Debugger                          #
+# ------------------------------------------------------- #
+if [ ! -z "$(command -v i3)" ]
+then
+	rm ~/.config/i3/config
+	ln -s -T ~/.config-files/i3/config ~/.config/i3/config
 fi
