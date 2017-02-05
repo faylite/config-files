@@ -109,7 +109,7 @@ source $ZSH/oh-my-zsh.sh
 setopt NO_NOMATCH
 
 # Set terminal to one with 256color support
-export TERM="xterm-256color"
+export TERM="screen-256color"
 
 # Enable spell checker
 setopt CORRECT
