@@ -5,7 +5,7 @@
 # ------------------------------------------------------- #
 #               Install applications                      #
 # ------------------------------------------------------- #
-packages="zsh vim tmux weechat exuberant-ctags curl git-flow i3-wm i3-status"
+packages="zsh vim tmux weechat exuberant-ctags curl git-flow i3 i3blocks i3lock i3-status i3-wm"
 
 # ------------------------------------------------------- #
 #             pact (babun windows Cygwin)                 #
