@@ -5,7 +5,7 @@
 # ------------------------------------------------------- #
 #               Install applications                      #
 # ------------------------------------------------------- #
-packages="zsh vim tmux weechat exuberant-ctags curl git-flow i3 i3blocks i3lock i3-status i3-wm"
+packages="zsh vim tmux weechat exuberant-ctags curl git-flow i3 i3blocks i3lock i3status dmenu"
 
 # ------------------------------------------------------- #
 #             pact (babun windows Cygwin)                 #
@@ -117,7 +117,7 @@ then
 fi
 
 # ------------------------------------------------------- #
-#                   GNU Debugger                          #
+#                   i3 Window Manager                     #
 # ------------------------------------------------------- #
 if [ ! -z "$(command -v i3)" ]
 then
