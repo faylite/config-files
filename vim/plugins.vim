@@ -83,9 +83,6 @@ Plugin 'vimwiki/vimwiki'
 " ctags bar (tagbar)
 Plugin 'majutsushi/tagbar'
 
-" Syntastic
-Plugin 'scrooloose/syntastic'
-
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
