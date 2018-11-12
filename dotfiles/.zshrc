@@ -55,11 +55,9 @@ ZSH_THEME="faylite"
 # composer		- PHP Composer completion
 # laravel5		- Laravel5 auto-completion and aliases
 # web-search 	- Web search, google TEXT, bing TEXT, ddg TEXT
-# nyan		 	- nyan nyan nyan nyan nyan nyan
-# catimg		- Prints an image of a cat
 # rand-quote 	- random quote
 
-plugins=(git git-flow z nmap sudo vagrant gradle gitignore web-search composer laravel5 nyan catimg rand-quote lol ssh-agent)
+plugins=(git git-flow z nmap sudo vagrant gradle gitignore web-search composer laravel5 rand-quote lol ssh-agent)
 
 # --------------------------------------
 
