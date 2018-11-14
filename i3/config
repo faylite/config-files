@@ -121,8 +121,6 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-# lock screen
-bindsym $mod+Shift+v exec "i3lock -c 212121"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -156,6 +154,20 @@ bar {
         status_command i3status
         tray_output primary
 }
+
+mode "$mode_system" {
+	bindsym l exec --no-startup-id "i3lock -c 212121", mode "default"
+	bindsym e exec --no-startup-id "i3-msg exit", mode "default"
+	bindsym s exec --no-startup-id "i3lock -c 212121 && systemctl suspend", mode "default"
+	bindsym h exec --no-startup-id "i3lock -c 212121 && systemctl hibernate", mode "default"
+	bindsym r exec --no-startup-id "systemctl reboot", mode "default"
+	bindsym Shift+s exec --no-startup-id "systemctl poweroff", mode "default"
+
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+}
+bindsym $mod+Pause mode "$mode_system"
+
 
 # Always execute these commands
 exec_always --no-startup-id numlockx on
