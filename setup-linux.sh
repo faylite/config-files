@@ -86,6 +86,11 @@ then
 	mkdir ~/.vim/backup ~/.vim/swap ~/.vim/undo
 	# Run vim command to install all the vundle plugins and exit
 	vim +BundleInstall +qall
+
+	# Install patched fonts for special statusbar characters use in themes
+	git clone https://github.com/powerline/fonts.git --depth=1 /tmp/fonts
+	/tmp/fonts/install.sh
+	rm -rf /tmp/fonts
 fi
 
 # ------------------------------------------------------- #
