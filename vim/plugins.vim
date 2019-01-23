@@ -124,6 +124,9 @@ Plugin 'evidens/vim-twig'
 Plugin 'HerringtonDarkholme/yats.vim'
 " Vue.js
 Plugin 'posva/vim-vue'
+" SCSS / SASS
+Plugin 'JulesWang/css.vim'
+Plugin 'cakebaker/scss-syntax.vim'
 
 " All Plugins must be added before the following line
 call vundle#end()			" required
