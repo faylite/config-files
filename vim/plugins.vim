@@ -83,6 +83,10 @@ Plugin 'vimwiki/vimwiki'
 " ctags bar (tagbar)
 Plugin 'majutsushi/tagbar'
 
+" Docker
+Plugin 'docker/docker'
+autocmd BufNewFile,BufRead *.dockerfile set syntax=dockerfile
+
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
