@@ -9,6 +9,7 @@ source ~/.config-files/vim/plugins.vim
 let g:ctrlp_custom_ignore = {
 			\ 'dir': '\.git$\|\vendor$|node_modules|bower_components|public/[^.;]+'
 			\}
+let g:ctrlp_root_markers = ['package.json']
 " (public/[^,;]+) matches subdirectories and files without '.'
 
 " --------------------------------------------------------------------------------------------
