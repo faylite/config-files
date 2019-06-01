@@ -85,6 +85,9 @@ augroup end
 " PSR Complitant indenting
 autocmd Filetype php setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 
+" Vue syntax highlighting fix
+autocmd FileType vue syntax sync fromstart
+
 " --------------------------------------------------------------------------------------------
 " |										 Visual Stuff										 |
 " --------------------------------------------------------------------------------------------
