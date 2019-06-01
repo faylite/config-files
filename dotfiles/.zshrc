@@ -66,6 +66,13 @@ plugins=(git git-flow z nmap sudo vagrant gradle gitignore web-search composer l
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# ssh-agent configuration
+#
+# Enable ssh agent forwarding
+# zstyle :omz:plugins:ssh-agent agent-forwarding on
+# Specify which identities to use
+zstyle :omz:plugins:ssh-agent identities id_rsa
+
 if [ -d "$HOME/bin" ]
 then
 	export PATH="$HOME/bin:$PATH"
