@@ -128,7 +128,7 @@ source ~/.config-files/aliases.sh
 touch ~/.local_env.sh
 # source custom PATH for this system
 source ~/.local_env.sh
-if [ /usr/bin/kubectl ]; then source <(kubectl completion zsh); fi
+if [ -f /usr/bin/kubectl ]; then source <(kubectl completion zsh); fi
 ###-begin-npm-completion-###
 #
 # npm command completion script
