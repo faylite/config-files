@@ -43,7 +43,7 @@ ret+=" $current_date"
 
 # --- Current Time
 ret+="#[fg=colour235]$sepR#[bg=colour235]#[fg=blue]$sepR#[bg=blue]#[fg=white]"
-ret+=" ⌚ $current_time "
+ret+=" $current_time "
 
 # --- Battery Status for linux based machines
 if [ "$TMUX_ENABLE_LINUX_BATTERY" = "TRUE" ]
