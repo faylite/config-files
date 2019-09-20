@@ -76,5 +76,33 @@ then
 	fi
 fi
 
+if [ "$TMUX_ENABLE_MAC_BATTERY" = "TRUE" ]
+then
+	ps_info=$(pmset -g ps)
+	ps_type=$(echo $ps_info | sed -E -n 's/.*(AC|Battery) Power.*/\1/p')
+	bat_percent=$(echo $ps_info | sed -E -n 's/.*[^[:digit:]]([0-9]+)%;.*/\1/p')
+
+	if [ $ps_type = "Battery" ]
+	then
+		if [[ $bat_percent -lt 20 ]]
+		then
+			ret+="#[fg=colour160]$sepR#[fg=white]"
+			ret+="#[bg=colour160]"
+		elif [[ $bat_percent -lt 60 ]]
+		then
+			ret+="#[fg=colour202]$sepR#[fg=white]"
+			ret+="#[bg=colour202]"
+		else
+			ret+="#[fg=colour149]$sepR#[fg=black]"
+			ret+="#[bg=colour149]"
+		fi
+		ret+=" $bat_percent%% "
+	else
+		ret+="#[fg=colour149]$sepR#[fg=black]"
+		ret+="#[bg=colour149]"
+		ret+=" +$bat_percent%% "
+	fi
+fi
+
 # Output new status line
 printf "$ret"
