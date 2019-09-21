@@ -7,6 +7,7 @@
 source ~/.config-files/env/tmux.env
 
 # Separators REQUIRES POWERLINE PATCHED FONTS!
+len=20
 sep=""
 sep2=""
 
@@ -38,8 +39,8 @@ then
 
 	if [ "$state" = "playing" ]
 	then
-		track_name=$(osascript -e 'tell application "iTunes" to name of current track as string')
-		track_artist=$(osascript -e 'tell application "iTunes" to artist of current track as string')
+		track_name=$(osascript -e 'tell application "iTunes" to name of current track as string' | perl -pe "s/(?<=.{$len}).{1,}$/…/")
+		track_artist=$(osascript -e 'tell application "iTunes" to artist of current track as string' | perl -pe "s/(?<=.{$len}).{1,}$/…/")
 
 		ret+="#[fg=colour237]$sep#[fg=white]#[bg=colour237]"
 		ret+="#[fg=colour202]$sep#[fg=white]#[bg=colour202]"
