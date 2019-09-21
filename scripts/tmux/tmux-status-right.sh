@@ -32,6 +32,21 @@ then
 	ret+=" ♪ $current_title - $current_artist "
 fi
 
+if [ "$TMUX_ENABLE_ITUNES" = "TRUE" ]
+then
+	state=$(osascript -e 'tell application "iTunes" to player state as string')
+
+	if [ "$state" = "playing" ]
+	then
+		track_name=$(osascript -e 'tell application "iTunes" to name of current track as string')
+		track_artist=$(osascript -e 'tell application "iTunes" to artist of current track as string')
+
+		ret+="#[fg=colour237]$sep#[fg=white]#[bg=colour237]"
+		ret+="#[fg=colour202]$sep#[fg=white]#[bg=colour202]"
+		ret+=" ♪ $track_name - $track_artist "
+	fi
+fi
+
 # --- Current Date
 ret+="#[fg=colour238]$sep#[fg=white]#[bg=colour238]"
 ret+="#[fg=blue]$sep#[bg=blue]#[fg=white]"
