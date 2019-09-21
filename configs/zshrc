@@ -122,7 +122,7 @@ export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 
 # Add extra aliases
-source ~/.config-files/aliases.sh
+source ~/.config-files/scripts/aliases.sh
 
 # Create custom env setup file if it doesn't exist
 touch ~/.local_env.sh

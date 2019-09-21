@@ -3,7 +3,7 @@
 " --------------------------------------------------------------------------------------------
 
 " Source Plugins file
-source ~/.config-files/vim/plugins.vim
+source ~/.config-files/apps/vim/plugins.vim
 
 " ---- CtrlP ----
 let g:ctrlp_custom_ignore = {

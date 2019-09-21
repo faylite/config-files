@@ -4,13 +4,11 @@
 # Custom tmux line, right side
 # Made to be modular and easy to change
 
-source ~/.local_env.sh
+source ~/.config-files/env/tmux.env
 
 # Separators REQUIRES POWERLINE PATCHED FONTS!
-sepL=""
-sepL2=""
-sepR=""
-sepR2=""
+sep=""
+sep2=""
 
 if [ "$TMUX_ENABLE_DEADBEEF" = "TRUE" ]
 then
@@ -29,20 +27,20 @@ ret=""
 if [ "$TMUX_ENABLE_DEADBEEF" = "TRUE" ]
 then
 	# --- Currently Playing deadbeef track ---
-	ret+="#[fg=colour237]$sepR#[fg=white]#[bg=colour237]"
-	ret+="#[fg=colour202]$sepR#[fg=white]#[bg=colour202]"
+	ret+="#[fg=colour237]$sep#[fg=white]#[bg=colour237]"
+	ret+="#[fg=colour202]$sep#[fg=white]#[bg=colour202]"
 	ret+=" ♪ $current_title - $current_artist "
 fi
 
 # --- Current Date
-ret+="#[fg=colour238]$sepR#[fg=white]#[bg=colour238]"
-ret+="#[fg=blue]$sepR#[bg=blue]#[fg=white]"
+ret+="#[fg=colour238]$sep#[fg=white]#[bg=colour238]"
+ret+="#[fg=blue]$sep#[bg=blue]#[fg=white]"
 ret+=" $current_day "
-ret+="#[fg=colour235]$sepR#[bg=colour235]#[fg=white]"
+ret+="#[fg=colour235]$sep#[bg=colour235]#[fg=white]"
 ret+=" $current_date"
 
 # --- Current Time
-ret+="#[fg=colour235]$sepR#[bg=colour235]#[fg=blue]$sepR#[bg=blue]#[fg=white]"
+ret+="#[fg=colour235]$sep#[bg=colour235]#[fg=blue]$sep#[bg=blue]#[fg=white]"
 ret+=" $current_time "
 
 # --- Battery Status for linux based machines
@@ -58,19 +56,19 @@ then
 	then
 		if [[ $bat_percent -lt 20 ]]
 		then
-			ret+="#[fg=colour160]$sepR#[fg=white]"
+			ret+="#[fg=colour160]$sep#[fg=white]"
 			ret+="#[bg=colour160]"
 		elif [[ $bat_percent -lt 60 ]]
 		then
-			ret+="#[fg=colour202]$sepR#[fg=white]"
+			ret+="#[fg=colour202]$sep#[fg=white]"
 			ret+="#[bg=colour202]"
 		else
-			ret+="#[fg=colour149]$sepR#[fg=black]"
+			ret+="#[fg=colour149]$sep#[fg=black]"
 			ret+="#[bg=colour149]"
 		fi
 		ret+=" $bat_percent%% "
 	else
-		ret+="#[fg=colour149]$sepR#[fg=black]"
+		ret+="#[fg=colour149]$sep#[fg=black]"
 		ret+="#[bg=colour149]"
 		ret+=" +$bat_percent%% "
 	fi
@@ -86,19 +84,19 @@ then
 	then
 		if [[ $bat_percent -lt 20 ]]
 		then
-			ret+="#[fg=colour160]$sepR#[fg=white]"
+			ret+="#[fg=colour160]$sep#[fg=white]"
 			ret+="#[bg=colour160]"
 		elif [[ $bat_percent -lt 60 ]]
 		then
-			ret+="#[fg=colour202]$sepR#[fg=white]"
+			ret+="#[fg=colour202]$sep#[fg=white]"
 			ret+="#[bg=colour202]"
 		else
-			ret+="#[fg=colour149]$sepR#[fg=black]"
+			ret+="#[fg=colour149]$sep#[fg=black]"
 			ret+="#[bg=colour149]"
 		fi
 		ret+=" $bat_percent%% "
 	else
-		ret+="#[fg=colour149]$sepR#[fg=black]"
+		ret+="#[fg=colour149]$sep#[fg=black]"
 		ret+="#[bg=colour149]"
 		ret+=" +$bat_percent%% "
 	fi
