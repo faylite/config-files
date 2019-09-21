@@ -34,7 +34,7 @@ fi
 
 if [ "$TMUX_ENABLE_ITUNES" = "TRUE" ]
 then
-	state=$(osascript -e 'tell application "iTunes" to player state as string')
+	state=$(osascript -e 'tell application "iTunes" to if it is running then player state')
 
 	if [ "$state" = "playing" ]
 	then
