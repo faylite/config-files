@@ -1,5 +1,29 @@
 # Config Files
 
+> My configuration files for mac and linux machines
+
+![Preview](.github/preview.png)
+
+## Features
+
+- Vim
+  - Pre-configured vim with a bunch of plugins installed through vundle.
+- zsh
+  - Installs zsh and oh-my-zsh
+  - Custom theme for oh-my-zsh
+  - Productivity tweaks
+- tmux
+  - Custom tmux theme
+  - Tailor made simple status line
+    - Battery status on mac and linux
+    - Song/artist status in deadbeef and iTunes
+- weechat
+  - Custom theme and other tweaks
+- Mac specific
+  - Installs homebrew automatically
+- Linux specific
+  - Installs i3 window manager with custom configurations
+
 ## Installation
 
 First you need to checkout the config files repo and place it in your home directory with the correct directory name,
