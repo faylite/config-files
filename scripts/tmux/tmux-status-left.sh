@@ -10,12 +10,18 @@ sepL2=""
 sepR=""
 sepR2=""
 
+osLogo=""
+if [ "$(uname)" == "Darwin" ]
+then
+  osLogo=" "
+fi
+
 # Build the status line
 ret=""
 
 # Show current user
 ret+="#[bg=blue]#[fg=white]"
-ret+=" $USER"
+ret+="$osLogo $USER"
 # and current machine/server
 ret+="@$HOSTNAME "
 

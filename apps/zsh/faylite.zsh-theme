@@ -22,6 +22,6 @@ fi
 
 # git settings
 ZSH_THEME_GIT_PROMPT_PREFIX="$FG[245](branch:$FG[214]"
-ZSH_THEME_GIT_PROMPT_CLEAN="$FG[245])%{$reset_color%}$FG[046]%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_CLEAN="$FG[245])%{$reset_color%}$FG[046]✓%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="$FG[245])%{$reset_color%}$FG[196]⁕%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
