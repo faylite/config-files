@@ -53,12 +53,6 @@ Plugin 'kien/ctrlp.vim'
 " Auto-create directories when saving in non-existen dir
 Plugin 'travisjeffery/vim-auto-mkdir'
 
-" Snippets dependencies
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-" Snippets
-Plugin 'garbas/vim-snipmate'
-
 " Surround with
 Plugin 'tpope/vim-surround'
 
