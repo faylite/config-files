@@ -71,7 +71,11 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 # Enable ssh agent forwarding
 # zstyle :omz:plugins:ssh-agent agent-forwarding on
 # Specify which identities to use
-zstyle :omz:plugins:ssh-agent identities id_rsa
+if [ -f "~/.ssh/id_rsa" ]; then
+	zstyle :omz:plugins:ssh-agent identities id_rsa
+elif [ -f "~/.ssh/id_ed25519" ]; then
+	zstyle :omz:plugins:ssh-agent identities id_ed25519
+fi
 
 if [ -d "$HOME/bin" ]
 then
@@ -128,7 +132,10 @@ source ~/.config-files/scripts/aliases.sh
 touch ~/.local_env.sh
 # source custom PATH for this system
 source ~/.local_env.sh
+
+# kubectl auto-complete
 if [ -f /usr/bin/kubectl ]; then source <(kubectl completion zsh); fi
+
 ###-begin-npm-completion-###
 #
 # npm command completion script
