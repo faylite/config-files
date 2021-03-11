@@ -33,3 +33,4 @@ source ~/.config-files/setup/common.sh
 
 # Setup aliases for bash
 printf "\nsource ~/.config-files/scripts/aliases.sh\n" >> ~/.bash_profile
+printf "\nsource ~/.local_env.sh\n" >> ~/.bash_profile
