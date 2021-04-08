@@ -62,3 +62,8 @@ then
 	rm ~/.weechat/weechat.conf
 	ln -s ~/.config-files/configs/weechat.conf ~/.weechat/weechat.conf
 fi
+
+# ------------------------------------------------------- #
+#                       Misc                              #
+# ------------------------------------------------------- #
+ln -s ~/.config-files/configs/ideavimrc ~/.ideavimrc
