@@ -1,6 +1,6 @@
 # Navigation
-alias l="ls -la"
-alias ll="ls -l"
+alias l="ls -lah"
+alias ll="ls -lh"
 alias c="clear"
 alias cls="clear"
 alias ..="cd .."
