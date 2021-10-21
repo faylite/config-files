@@ -16,6 +16,10 @@
 	<true/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
+	<key>NeverWarnAboutShortLivedSessions_5C917C92-C831-4C6C-9DE8-F7AFE6781A72</key>
+	<true/>
+	<key>NeverWarnAboutShortLivedSessions_5C917C92-C831-4C6C-9DE8-F7AFE6781A72_selection</key>
+	<integer>0</integer>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -792,8 +796,12 @@
 			<string>kNextWindowPointerAction</string>
 		</dict>
 	</dict>
-	<key>QuitWhenAllWindowsClosed</key>
+	<key>PromptOnQuit</key>
 	<false/>
+	<key>PromptOnQuitEvenIfThereAreNoWindows</key>
+	<false/>
+	<key>QuitWhenAllWindowsClosed</key>
+	<true/>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>TabStyleWithAutomaticOption</key>
