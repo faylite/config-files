@@ -125,6 +125,8 @@ Plugin 'posva/vim-vue'
 " SCSS / SASS
 Plugin 'JulesWang/css.vim'
 Plugin 'cakebaker/scss-syntax.vim'
+" Kotlin
+Plugin 'udalov/kotlin-vim'
 
 " All Plugins must be added before the following line
 call vundle#end()			" required
