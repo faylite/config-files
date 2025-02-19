@@ -117,3 +117,11 @@ set directory=~/.vim/swap//
 " closing and re-opening vim
 set undodir=~/.vim/undo//
 set undofile
+
+" ---- Plugins ----
+
+" See the IdeaVim plugin emulation documentation: https://github.com/JetBrains/ideavim/wiki/IdeaVim%20Plugins#ideavim-plugins
+
+Plug 'preservim/nerdtree'
+Plug 'tpope/vim-surround'
+Plug 'junegunn/vim-peekaboo'
