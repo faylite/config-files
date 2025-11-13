@@ -81,6 +81,9 @@ Plugin 'majutsushi/tagbar'
 Plugin 'docker/docker'
 autocmd BufNewFile,BufRead *.dockerfile set syntax=dockerfile
 
+" Go
+Plugin 'fatih/vim-go'
+
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
