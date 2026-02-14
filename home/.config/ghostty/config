@@ -1,0 +1,21 @@
+theme = TokyoNight Night
+
+background-opacity = 0.95
+background-blur = true
+
+cursor-color = #FFFFFF
+cursor-text = #000000
+cursor-style = block
+cursor-style-blink = false
+
+mouse-hide-while-typing = true
+
+selection-background = #B3D7FF
+selection-foreground = #000000
+
+font-family = JetBrains Mono
+font-size = 16
+
+term = xterm-256color
+
+quit-after-last-window-closed = true

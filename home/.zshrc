@@ -1,5 +1,7 @@
-# Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
+export XDG_CONFIG_HOME=$HOME/.config
+
+source ~/.aliasrc
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -51,20 +53,13 @@ ZSH_THEME="faylite"
 # z 			- directory jumper, builds an database and jumps to the dir you most likely wanted to go to
 # nmap			- nmap completion
 # sudo			- Press <ESC> twice to add sudo before command, or previous command if line is empty
-# vagrant		- Vagrant completion
 # composer		- PHP Composer completion
-# laravel5		- Laravel5 auto-completion and aliases
 # web-search 	- Web search, google TEXT, bing TEXT, ddg TEXT
 # rand-quote 	- random quote
 
-plugins=(git git-flow z nmap sudo vagrant gradle gitignore web-search composer laravel5 rand-quote lol ssh-agent)
+plugins=(git sudo gradle gitignore web-search composer ssh-agent)
 
 # --------------------------------------
-
-# User configuration
-
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-# export MANPATH="/usr/local/man:$MANPATH"
 
 # ssh-agent configuration
 #
@@ -124,14 +119,6 @@ setopt CORRECT
 export EDITOR="vim"
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
-
-# Add extra aliases
-source ~/.config-files/scripts/aliases.sh
-
-# Create custom env setup file if it doesn't exist
-touch ~/.local_env.sh
-# source custom PATH for this system
-source ~/.local_env.sh
 
 # kubectl auto-complete
 if [ -f /usr/bin/kubectl ]; then source <(kubectl completion zsh); fi

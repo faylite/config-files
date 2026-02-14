@@ -3,7 +3,7 @@
 " --------------------------------------------------------------------------------------------
 
 " Source Plugins file
-source ~/.config-files/apps/vim/plugins.vim
+source ~/.vim/plugins.vim
 
 " ---- CtrlP ----
 let g:ctrlp_custom_ignore = {
@@ -22,7 +22,7 @@ let mapleader = ','
 " Mapping to edit .vimrc
 nmap <Leader>ev :e ~/.vimrc<cr>
 " Mapping to edit vim plugins file
-nmap <Leader>ep :e ~/.config-files/vim/plugins.vim<cr>
+nmap <Leader>ep :e ~/.vim/plugins.vim<cr>
 
 " Insert brackets
 ino <Leader>ib {}<esc>i

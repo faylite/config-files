@@ -26,15 +26,13 @@
 
 ## Installation
 
-First you need to checkout the config files repo and place it in your home directory with the correct directory name,
-remember to prefix the repo name with a dot, `.config-files`.
+Clone the repository to a permanent location on your system.
 
 ```bash
 git clone https://github.com/faylite/config-files.git ~/.config-files
 ```
 
-The setup scripts *must* be run from your home directory. So after you change to your home directory, run the required setup script.
-Please make a backup of your configuration files before running these scripts *as they will overwrite everything*.
+Afterwards run the setup script for the platform you're on.
 
 ```bash
 # Linux
@@ -42,6 +40,12 @@ Please make a backup of your configuration files before running these scripts *a
 
 # Mac
 .config-files/setup/mac.sh
+```
+
+Then run `stow` at the root of the directory to install symlinks for all the config files.
+
+```bash
+stow .
 ```
 
 ## Overview

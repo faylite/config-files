@@ -1,11 +1,9 @@
-# Setup script
-# Author:faylite
-# Sets up a linux machine to my preferred config
+#!/usr/bin/env bash
 
 # ------------------------------------------------------- #
 #               Install applications                      #
 # ------------------------------------------------------- #
-packages="zsh vim tmux weechat exuberant-ctags curl git-flow i3 i3blocks i3lock i3status dmenu"
+packages="zsh stow vim tmux exuberant-ctags curl i3 i3blocks i3lock i3status dmenu"
 
 # ------------------------------------------------------- #
 #             pact (babun windows Cygwin)                 #
@@ -41,25 +39,4 @@ then
 	sudo pacman -S $packages
 fi
 
-# ------------------------------------------------------- #
-#                   GNU Debugger                          #
-# ------------------------------------------------------- #
-if [ ! -z "$(command -v gdb)" ]
-then
-	rm ~/.gdbinit
-	ln -s ~/.config-files/configs/gdbinit ~/.gdbinit
-fi
-
-# ------------------------------------------------------- #
-#                   i3 Window Manager                     #
-# ------------------------------------------------------- #
-if [ ! -z "$(command -v i3)" ]
-then
-	rm ~/.config/i3/config
-	ln -s ~/.config-files/configs/i3.config ~/.config/i3/config
-fi
-
-source ~/.config-files/setup/common.sh
-
-# Add various bash aliases to bash
-printf "\nsource ~/.config-files/aliases.sh\n" >> ~/.bashrc
+source common.sh
