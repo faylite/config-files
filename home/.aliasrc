@@ -13,8 +13,9 @@ alias gc="git commit"
 alias gp="git push"
 
 # Vim
-alias vi="vim"
-alias vt="vim -t "
+alias vi="nvim"
+alias vim="nvim"
+alias vt="nvim -t "
 alias config-edit-vim="vim ~/.vimrc"
 alias config-edit-bash="vim ~/.bashrc"
 alias config-edit-zsh='vim ~/.zshrc'

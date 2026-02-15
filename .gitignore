@@ -2,3 +2,5 @@
 
 env/*
 !env/.examples
+
+home/.config/nvim/lazy-lock.json
