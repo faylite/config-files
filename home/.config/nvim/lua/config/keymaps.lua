@@ -46,3 +46,12 @@ do --- Code navigation
 	map("n", "<leader>jh", vim.lsp.buf.hover, "[J]ump to [H]elp")
 	map("n", "<M-CR>", vim.lsp.buf.code_action, "Code Action")
 end
+
+do --- Code wrangling
+	local conform = require("conform")
+	local function fmt()
+		return conform.format({ async = true, lsp_format = "fallback" })
+	end
+
+	map("n", "<leader>k", fmt, "[K]ode Format")
+end
