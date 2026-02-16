@@ -12,12 +12,13 @@ alias gc="git commit"
 # Vim
 alias vi="nvim"
 alias vim="nvim"
-alias vt="nvim -t "
-alias config-edit-vim="vim ~/.vimrc"
-alias config-edit-bash="vim ~/.bashrc"
-alias config-edit-zsh='vim ~/.zshrc'
-alias config-edit-tmux='vim ~/.tmux.conf'
-alias config-edit-alias='vim ~/.aliasrc'
+
+alias config-edit-nvim="nvim ~/.config/nvim/init.lua"
+alias config-edit-vim="nvim ~/.vimrc"
+alias config-edit-bash="nvim ~/.bashrc"
+alias config-edit-zsh='nvim ~/.zshrc'
+alias config-edit-tmux='nvim ~/.tmux.conf'
+alias config-edit-alias='nvim ~/.aliasrc'
 
 # Dev tools
 alias art='php artisan'

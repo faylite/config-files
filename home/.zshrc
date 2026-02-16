@@ -1,5 +1,5 @@
-export ZSH=$HOME/.oh-my-zsh
 export XDG_CONFIG_HOME=$HOME/.config
+export ZSH=$HOME/.oh-my-zsh
 
 source ~/.aliasrc
 
@@ -57,7 +57,7 @@ ZSH_THEME="faylite"
 # web-search 	- Web search, google TEXT, bing TEXT, ddg TEXT
 # rand-quote 	- random quote
 
-plugins=(git sudo gradle gitignore web-search composer ssh-agent)
+plugins=(sudo gradle gitignore composer ssh-agent)
 
 # --------------------------------------
 
@@ -81,13 +81,6 @@ source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -115,8 +108,12 @@ setopt NO_NOMATCH
 # Enable spell checker
 setopt CORRECT
 
-# Set vim as default editor
-export EDITOR="vim"
+# Set nvim as default editor unless on a remote connection
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vi'
+else
+  export EDITOR='nvim'
+fi
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 
