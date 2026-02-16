@@ -10,7 +10,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # ------------------------------------------------------- #
 #               Install applications                      #
 # ------------------------------------------------------- #
-packages="zsh vim tmux weechat ctags curl docker stow ghostty"
+packages="zsh vim ctags curl docker stow ghostty"
 
 if [ ! -z "$(command -v brew)" ]
 then
