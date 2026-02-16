@@ -1,4 +1,6 @@
 # Navigation
+alias ..="cd .."
+alias ...="cd ../.."
 alias l="ls -lah"
 alias ll="ls -lh"
 alias lld="ls -lhd .*"

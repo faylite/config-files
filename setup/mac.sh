@@ -5,8 +5,7 @@ xcode-select --install
 # ------------------------------------------------------- #
 #                  Setup homebrew                         #
 # ------------------------------------------------------- #
-if [ -z "$(command -v brew)" ] # Install when missing
-then
+if [ -z "$(command -v brew)" ]; then # Install when missing
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 	eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -51,4 +50,4 @@ brew install vim nvim \
 
 source common.sh
 
-printf "\neval \"$(/opt/homebrew/bin/brew shellenv)\"\n" >> ~/.profile
+printf "\neval \"$(/opt/homebrew/bin/brew shellenv)\"\n" >>~/.profile

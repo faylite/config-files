@@ -1,23 +1,19 @@
 #!/usr/bin/env bash
 
 # ------------------------------------------------------- #
-#               Setup zsh and oh-my-zsh                   #
+#                    Oh my zsh                            #
 # ------------------------------------------------------- #
-# If zsh is installed
-if [ ! -z "$(command -v zsh)" ]
-then
-	# Setup oh-my-zsh
-	sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+if [ ! -z "$(command -v vim)" ]; then
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
 # ------------------------------------------------------- #
 #                      Vim                                #
 # ------------------------------------------------------- #
-if [ ! -z "$(command -v vim)" ]
-then
+if [ ! -z "$(command -v vim)" ]; then
 	# Install vundle
-	if [ ! -d ~/.vim/bundle ]
-	then
+	if [ ! -d ~/.vim/bundle ]; then
 		git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 	fi
 
