@@ -1,13 +1,20 @@
+# Navigation
 alias l="ls -lah"
 alias ll="ls -lh"
+alias lld="ls -lhd .*"
 
 # Git
 alias g="git"
 alias s="git status"
-alias gl="git log --graph --oneline --decorate --abbrev-commit --all"
-alias glt="git log --graph --oneline --decorate --abbrev-commit"
 alias ga="git add"
 alias gc="git commit"
+alias gl="git log --graph --oneline --decorate --abbrev-commit --all"
+alias glt="git log --graph --oneline --decorate --abbrev-commit"
+alias gll="git log --all --pretty=format:'%C(blue)%h %C(blue)%<(18)%cN %C(yellow)%ai %Creset%s'"
+alias gls="git log --all --pretty=format:'%C(blue)%h %C(blue)%<(18)%cN %C(yellow)%as %Creset%s'"
+
+alias git-stale-list='git fetch --prune && git branch -r | awk "{print \$1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print \$1}"'
+alias git-stale-prune='git fetch --prune && git branch -r | awk "{print \$1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print \$1}" | xargs git branch -d'
 
 # Vim
 alias vi="nvim"
@@ -22,6 +29,7 @@ alias config-edit-alias='nvim ~/.aliasrc'
 
 # Dev tools
 alias art='php artisan'
+alias sail='[ -f sail ] && bash sail || bash ./vendor/bin/sail'
 alias sugoi="./vendor/bin/sugoi"
 
 # alias t='tmux'

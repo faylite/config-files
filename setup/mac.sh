@@ -10,7 +10,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # ------------------------------------------------------- #
 #               Install applications                      #
 # ------------------------------------------------------- #
-packages="zsh vim ctags curl docker stow ghostty"
+packages="zsh vim nvim ctags curl docker stow ghostty"
 
 if [ ! -z "$(command -v brew)" ]
 then
@@ -23,5 +23,4 @@ fi
 
 source common.sh
 
-printf "\neval \"$(/opt/homebrew/bin/brew shellenv)\"\n" >> ~/.zprofile
-printf "\neval \"$(/opt/homebrew/bin/brew shellenv)\"\n" >> ~/.bash_profile
+printf "\neval \"$(/opt/homebrew/bin/brew shellenv)\"\n" >> ~/.profile
