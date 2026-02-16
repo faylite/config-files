@@ -1,7 +1,5 @@
 alias l="ls -lah"
 alias ll="ls -lh"
-alias ..="cd .."
-alias ...="cd ../.."
 
 # Git
 alias g="git"
@@ -10,7 +8,6 @@ alias gl="git log --graph --oneline --decorate --abbrev-commit --all"
 alias glt="git log --graph --oneline --decorate --abbrev-commit"
 alias ga="git add"
 alias gc="git commit"
-alias gp="git push"
 
 # Vim
 alias vi="nvim"
@@ -24,9 +21,10 @@ alias config-edit-alias='vim ~/.aliasrc'
 
 # Dev tools
 alias art='php artisan'
+alias sugoi="./vendor/bin/sugoi"
 
-alias t='tmux'
-alias ta='tmux attach -t'
-alias tnew='tmux new -s'
-alias tls='tmux ls'
-alias tkill='tmux kill-session -t'
+# alias t='tmux'
+# alias ta='tmux attach -t'
+# alias tnew='tmux new -s'
+# alias tls='tmux ls'
+# alias tkill='tmux kill-session -t'

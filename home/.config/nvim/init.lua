@@ -1,3 +1,10 @@
+vim.g.mapleader = ","
+vim.g.have_nerd_font = true
+
+-- Disable the default file explorer (replaced with nvim-tree)
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- Diagnostic Config & Keymaps
 -- See :help vim.diagnostic.Opts
 vim.diagnostic.config({
@@ -14,4 +21,9 @@ vim.diagnostic.config({
 	jump = { float = true },
 })
 
+require("config.options")
+
 require("config.lazy")
+
+require("config.autocmds")
+require("config.keymaps")

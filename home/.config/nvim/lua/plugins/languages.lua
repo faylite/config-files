@@ -1,6 +1,5 @@
 --- Language servers
 ---   see :Mason for additional servers available.
-
 local servers = {
 	-- Data / config formats
 	jsonls = {},
@@ -75,10 +74,6 @@ return {
 						mode = mode or "n"
 						vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = "LSP: " .. desc })
 					end
-
-					map("<leader>jd", vim.lsp.buf.definition, "[J]ump to [D]efinition")
-					map("<leader>ji", vim.lsp.buf.implementation, "[J]ump to [I]mplementation")
-					map("<leader>jh", vim.lsp.buf.hover, "[J]ump to [H]elp")
 
 					local client = vim.lsp.get_client_by_id(event.data.client_id)
 					if client and client:supports_method("textDocument/documentHighlight", event.buf) then
