@@ -15,7 +15,6 @@ local servers = {
 	-- HTML / CSS
 	html = { filetypes = { "html" } },
 	cssls = { filetypes = { "css", "scss", "less" } },
-	tailwindcss = { mason = "tailwindcss-language-server" },
 
 	-- Shell / infra
 	bashls = {},
