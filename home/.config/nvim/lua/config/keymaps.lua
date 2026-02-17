@@ -19,6 +19,7 @@ end
 do --- File Explorer
 	local api = require("nvim-tree.api")
 	map("n", "<leader>n", api.tree.toggle, "[N]vimTree Toggle")
+	map("n", "<C-CR>", api.tree.change_root_to_node, "Go into directory")
 end
 
 do --- Terminal
@@ -30,6 +31,15 @@ do --- Terminal
 
 	map("t", "<Esc>", "<C-\\><C-n>", "Exit [T]erminal mode")
 	map("n", "<leader>t", term_toggle, "Toggle [T]erminal (Main)")
+end
+
+do --- Code wrangling
+	local conform = require("conform")
+	local function fmt()
+		return conform.format({ async = true, lsp_format = "fallback" })
+	end
+
+	map("n", "<leader>k", fmt, "[K]ode Format")
 end
 
 do --- Code navigation
@@ -45,13 +55,4 @@ do --- Code navigation
 	map("n", "<leader>ji", builtin.lsp_implementations, "[J]ump to [I]mplementation")
 	map("n", "<leader>jh", vim.lsp.buf.hover, "[J]ump to [H]elp")
 	map("n", "<M-CR>", vim.lsp.buf.code_action, "Code Action")
-end
-
-do --- Code wrangling
-	local conform = require("conform")
-	local function fmt()
-		return conform.format({ async = true, lsp_format = "fallback" })
-	end
-
-	map("n", "<leader>k", fmt, "[K]ode Format")
 end

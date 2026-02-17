@@ -8,7 +8,27 @@ return {
 		},
 		opts = {},
 		config = function()
-			require("nvim-tree").setup({})
+			--- :help nvim-tree-setup
+			require("nvim-tree").setup({
+				prefer_startup_root = true,
+				sync_root_with_cwd = true,
+				view = {
+					width = 40,
+				},
+				renderer = {
+					icons = {
+						glyphs = {
+							git = {
+								unstaged = "⁕",
+							},
+						},
+					},
+				},
+				filters = {
+					git_ignored = false,
+					custom = { "^.git$" },
+				},
+			})
 		end,
 	},
 	{ -- Fuzzy finder
