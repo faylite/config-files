@@ -1,12 +1,11 @@
 source ~/.config/custom/init.sh
 
-
 # ---------------- oh-my-zsh options ---------------------
 
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="faylite"
 
-plugins=(sudo gradle gitignore composer ssh-agent)
+plugins=(sudo ssh-agent)
 
 source $ZSH/oh-my-zsh.sh
 

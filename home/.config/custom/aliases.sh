@@ -33,9 +33,10 @@ alias config-edit-alias='nvim ~/.aliasrc'
 alias art='php artisan'
 alias sail='[ -f sail ] && bash sail || bash ./vendor/bin/sail'
 alias sugoi="./vendor/bin/sugoi"
+alias py=python3
 
-# alias t='tmux'
-# alias ta='tmux attach -t'
-# alias tnew='tmux new -s'
-# alias tls='tmux ls'
-# alias tkill='tmux kill-session -t'
+alias t='tmux'
+alias ta='tmux attach -t'
+alias tnew='tmux new -s'
+alias tls='tmux ls'
+alias tkill='tmux kill-session -t'
