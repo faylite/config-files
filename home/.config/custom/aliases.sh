@@ -19,7 +19,6 @@ alias git-stale-list='git fetch --prune && git branch -r | awk "{print \$1}" | e
 alias git-stale-prune='git fetch --prune && git branch -r | awk "{print \$1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print \$1}" | xargs git branch -d'
 
 # Vim
-alias vi="nvim"
 alias vim="nvim"
 
 alias config-edit-nvim="nvim ~/.config/nvim/init.lua"

@@ -28,6 +28,13 @@ return {
 					git_ignored = false,
 					custom = { "^.git$" },
 				},
+				filesystem_watchers = {
+					enable = false,
+				},
+				git = {
+					enable = true,
+					timeout = 200,
+				},
 			})
 		end,
 	},

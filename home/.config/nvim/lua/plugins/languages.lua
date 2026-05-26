@@ -42,7 +42,9 @@ local servers = {
 					checkThirdParty = false,
 					-- NOTE: this is a lot slower and will cause issues when working on your own configuration.
 					--  See https://github.com/neovim/nvim-lspconfig/issues/3189
-					library = vim.api.nvim_get_runtime_file("", true),
+					library = {
+						vim.env.VIMRUNTIME,
+					},
 				},
 			})
 		end,
@@ -112,7 +114,9 @@ return {
 				end,
 			})
 
-			vim.lsp.config("*", require("blink.cmp").get_lsp_capabilities())
+			vim.lsp.config("*", {
+				capabilities = require("blink.cmp").get_lsp_capabilities(),
+			})
 
 			for name, config in pairs(servers) do
 				vim.lsp.config(name, config)
@@ -134,18 +138,18 @@ return {
 		config = function()
 			local tree = require("nvim-treesitter")
 
-			tree.setup()
-			tree.install({
-				"html",
-				"php",
-				"php_only",
-				"sql",
-				"lua",
-				"javascript",
-				"typescript",
-				"yaml",
-				"vue",
-				"v",
+			tree.setup({
+				ensure_installed = {
+					"html",
+					"php",
+					"sql",
+					"lua",
+					"javascript",
+					"typescript",
+					"yaml",
+					"vue",
+					"v",
+				},
 			})
 		end,
 	},

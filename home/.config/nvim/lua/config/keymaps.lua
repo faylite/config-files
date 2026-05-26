@@ -17,42 +17,57 @@ do --- AI
 end
 
 do --- File Explorer
-	local api = require("nvim-tree.api")
-	map("n", "<leader>n", api.tree.toggle, "[N]vimTree Toggle")
-	map("n", "<C-CR>", api.tree.change_root_to_node, "Go into directory")
+	map("n", "<leader>n", function()
+		require("nvim-tree.api").tree.toggle()
+	end, "[N]vimTree Toggle")
+
+	map("n", "<C-CR>", function()
+		require("nvim-tree.api").tree.change_root_to_node()
+	end, "Go into directory")
 end
 
 do --- Terminal
-	local api = require("toggleterm")
-
-	local function term_toggle()
-		api.toggle(1, nil, nil, "horizontal", "main")
-	end
-
 	map("t", "<Esc>", "<C-\\><C-n>", "Exit [T]erminal mode")
-	map("n", "<leader>t", term_toggle, "Toggle [T]erminal (Main)")
+	map("n", "<leader>t", function()
+		require("toggleterm").toggle(1, nil, nil, "horizontal", "main")
+	end, "Toggle [T]erminal (Main)")
 end
 
 do --- Code wrangling
-	local conform = require("conform")
-	local function fmt()
-		return conform.format({ async = true, lsp_format = "fallback" })
-	end
-
-	map("n", "<leader>k", fmt, "[K]ode Format")
+	map("n", "<leader>k", function()
+		require("conform").format({ async = true, lsp_format = "fallback" })
+	end, "[K]ode Format")
 end
 
 do --- Code navigation
-	local builtin = require("telescope.builtin")
 	map("n", "<leader>f", ":Telescope<CR>", "Telescope")
-	map("n", "<leader>ff", builtin.find_files, "[F]uzzy [F]ile")
-	map("n", "<leader>fs", builtin.live_grep, "[F]uzzy [S]earch")
-	map("n", "<leader>fb", builtin.buffers, "[F]uzzy [B]uffers")
-	map("n", "<leader>fh", builtin.help_tags, "[F]uzzy [H]elp tags")
-	map("n", "<leader>fu", builtin.diagnostics, "[F]uzzy [U]ps")
+
+	map("n", "<leader>ff", function()
+		require("telescope.builtin").find_files()
+	end, "[F]uzzy [F]ile")
+
+	map("n", "<leader>fs", function()
+		require("telescope.builtin").live_grep()
+	end, "[F]uzzy [S]earch")
+
+	map("n", "<leader>fb", function()
+		require("telescope.builtin").buffers()
+	end, "[F]uzzy [B]uffers")
+
+	map("n", "<leader>fh", function()
+		require("telescope.builtin").help_tags()
+	end, "[F]uzzy [H]elp tags")
+
+	map("n", "<leader>fu", function()
+		require("telescope.builtin").diagnostics()
+	end, "[F]uzzy [U]ps")
 
 	map("n", "<leader>jd", vim.lsp.buf.definition, "[J]ump to [D]efinition")
-	map("n", "<leader>ji", builtin.lsp_implementations, "[J]ump to [I]mplementation")
+
+	map("n", "<leader>ji", function()
+		require("telescope.builtin").lsp_implementations()
+	end, "[J]ump to [I]mplementation")
+
 	map("n", "<leader>jh", vim.lsp.buf.hover, "[J]ump to [H]elp")
 	map("n", "<M-CR>", vim.lsp.buf.code_action, "Code Action")
 end
