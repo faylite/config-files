@@ -13,6 +13,7 @@ mouse-hide-while-typing = true
 selection-background = #B3D7FF
 selection-foreground = #000000
 
+font-feature = -calt
 font-family = JetBrains Mono
 font-size = 16
 

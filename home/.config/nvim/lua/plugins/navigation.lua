@@ -16,10 +16,17 @@ return {
 					width = 40,
 				},
 				renderer = {
+					highlight_git = "name",
 					icons = {
 						glyphs = {
 							git = {
 								unstaged = "⁕",
+								staged = "✓",
+								unmerged = "",
+								renamed = "➜",
+								untracked = "",
+								deleted = "",
+								ignored = "",
 							},
 						},
 					},
